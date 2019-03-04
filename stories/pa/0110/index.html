@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0110">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0110">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0110">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0110">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0110">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0110">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0110">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0110">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0110">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0110">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0110">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0110">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0110">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0110">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0110">persisk</option>
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/pa/0110/mp3/01.mp3"></audio>
 				<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk and dansk">da</button>
-				<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Nicola Rijsdijk</h3>
@@ -98,6 +98,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/pa">punjabisk</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/pa/level3">Niveau 3</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/pa/0110/pa-0110_wangari.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -124,7 +125,7 @@ fields with her mother. Her name was Wangari.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk og dansk">da</button>
-		<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -153,7 +154,7 @@ with her machete. She pressed tiny seeds into the warm earth.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk og dansk">da</button>
-		<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -183,7 +184,7 @@ She would follow the narrow paths through the fields, crossing rivers as she wen
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk og dansk">da</button>
-		<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -214,7 +215,7 @@ go to school.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk og dansk">da</button>
-		<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -245,7 +246,7 @@ Wangari was excited! She wanted to know more about the world.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk og dansk">da</button>
-		<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -275,7 +276,7 @@ brothers in the shade of the trees in the beautiful Kenyan forests.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk og dansk">da</button>
-		<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -305,7 +306,7 @@ The more she learnt, the more she remembered her African home.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk og dansk">da</button>
-		<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -336,7 +337,7 @@ children were hungry.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk og dansk">da</button>
-		<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -367,7 +368,7 @@ strong.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk og dansk">da</button>
-		<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -397,7 +398,7 @@ Today, millions of trees have grown from Wangari's seeds.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk og dansk">da</button>
-		<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -431,7 +432,7 @@ receive it.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk og dansk">da</button>
-		<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -459,7 +460,7 @@ receive it.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('pa,da','da,en,pa')" class="btn btn-lg lang-primary" title="Switch between punjabisk og dansk">da</button>
-		<button onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('pa,en','da,en,pa')" class="btn btn-lg lang-secondary" title="Switch between punjabisk og engelsk">en</button>
 	</div>
 </div>
 

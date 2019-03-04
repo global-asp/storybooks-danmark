@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0210">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0210">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0210">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0210">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0210">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0210">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0210">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0210">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0210">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0210">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0210">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0210">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0210">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0210">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0210">persisk</option>
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/am/0210/mp3/01.mp3"></audio>
 				<button onclick="switchlang('am,da','da,en,am')" class="btn btn-lg lang-primary" title="Switch between amharisk and dansk">da</button>
-				<button onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Ingrid Schechter</h3>
@@ -97,6 +97,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/am">amharisk</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/am/level2">Niveau 2</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/am/0210/am-0210_tingi.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -123,7 +124,7 @@ grandmother.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,da','da,en,am')" class="btn btn-lg lang-primary" title="Switch between amharisk og dansk">da</button>
-		<button onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -152,7 +153,7 @@ the cows with her.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,da','da,en,am')" class="btn btn-lg lang-primary" title="Switch between amharisk og dansk">da</button>
-		<button onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -181,7 +182,7 @@ came.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,da','da,en,am')" class="btn btn-lg lang-primary" title="Switch between amharisk og dansk">da</button>
-		<button onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -210,7 +211,7 @@ away.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,da','da,en,am')" class="btn btn-lg lang-primary" title="Switch between amharisk og dansk">da</button>
-		<button onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -240,7 +241,7 @@ and hid.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,da','da,en,am')" class="btn btn-lg lang-primary" title="Switch between amharisk og dansk">da</button>
-		<button onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -269,7 +270,7 @@ until night.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,da','da,en,am')" class="btn btn-lg lang-primary" title="Switch between amharisk og dansk">da</button>
-		<button onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -298,7 +299,7 @@ came back.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,da','da,en,am')" class="btn btn-lg lang-primary" title="Switch between amharisk og dansk">da</button>
-		<button onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -327,7 +328,7 @@ under the leaves.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,da','da,en,am')" class="btn btn-lg lang-primary" title="Switch between amharisk og dansk">da</button>
-		<button onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -357,7 +358,7 @@ but he kept quiet.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,da','da,en,am')" class="btn btn-lg lang-primary" title="Switch between amharisk og dansk">da</button>
-		<button onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -387,7 +388,7 @@ came out.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,da','da,en,am')" class="btn btn-lg lang-primary" title="Switch between amharisk og dansk">da</button>
-		<button onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -416,7 +417,7 @@ quietly.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,da','da,en,am')" class="btn btn-lg lang-primary" title="Switch between amharisk og dansk">da</button>
-		<button onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('am,en','da,en,am')" class="btn btn-lg lang-secondary" title="Switch between amharisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -442,11 +443,11 @@ quietly.
 			<label class="chip"><a href="/storybooks-danmark/stories/am/0095/">ዛማ ጎበዝ ነች</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/am/0089/">ካላይ ከእጽዋት ጋር ትነጋገራለች</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/am/0027/">ውሳኔ</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/am/0296/">ሙዝ ሻጩ ቶም</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/am/0342/">ቅጣት</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/am/0004/">ፍየል፣ ዉሻና ላም</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/am/0234/">አንዲስዋ የእግር ኳስ ኮከቧ</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/am/0001/">በጣም ረጅም ሰውዬ</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/am/0296/">ሙዝ ሻጩ ቶም</a></label>
 	</div>
 </div>
 <div>

@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0296">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0296">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0296">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0296">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0296">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0296">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0296">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0296">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0296">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0296">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0296">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0296">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0296">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0296">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0296">persisk</option>
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/en/0296/mp3/01.mp3"></audio>
 				<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk and dansk">da</button>
-				<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Humphreys Odunga</h3>
@@ -97,6 +97,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/en">engelsk</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/en/level2">Niveau 2</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/en/0296/en-0296_tom.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -122,7 +123,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk og dansk">da</button>
-		<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -150,7 +151,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk og dansk">da</button>
-		<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -178,7 +179,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk og dansk">da</button>
-		<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -214,7 +215,7 @@ They prefer to buy fruit from women.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk og dansk">da</button>
-		<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -242,7 +243,7 @@ They prefer to buy fruit from women.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk og dansk">da</button>
-		<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -278,7 +279,7 @@ Buy my sweet ripe bananas!"
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk og dansk">da</button>
-		<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -310,7 +311,7 @@ She looks at the bananas carefully.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk og dansk">da</button>
-		<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -338,7 +339,7 @@ She looks at the bananas carefully.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk og dansk">da</button>
-		<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -370,7 +371,7 @@ They buy Tom's bananas and eat them.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk og dansk">da</button>
-		<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -402,7 +403,7 @@ Tom counts the money he earned.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk og dansk">da</button>
-		<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -434,7 +435,7 @@ He puts the things in his tray.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk og dansk">da</button>
-		<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -462,7 +463,7 @@ He puts the things in his tray.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk og dansk">da</button>
-		<button onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -485,12 +486,12 @@ He puts the things in his tray.
 		<h5>Læs flere fortællinger på <a href="/storybooks-danmark/stories/en/level2">niveau 2</a>:</h5>
 			<label class="chip"><a href="/storybooks-danmark/stories/en/0337/">Children of wax</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/en/0111/">Why hippos have no hair</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/en/0095/">Zama is great!</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/en/0089/">Khalai talks to plants</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/en/0027/">Decision</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/en/0210/">Tingi and the Cows</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/en/0342/">Punishment</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/en/0004/">Goat, Dog, and Cow</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/en/0095/">Zama is great!</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/en/0234/">Andiswa Soccer Star</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/en/0001/">A very tall man</a></label>
 	</div>

@@ -12,7 +12,7 @@
 	<link rel="shortcut icon" href="/storybooks-danmark/favicon.ico?v=4">
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
-	<title>ئەو ڕۆژەی ماڵەوەم جێهیشت بۆ ئەوەی بچم بۆ شار - Børnebøger for Danmark</title>
+	<title>ئەو ڕۆژەی ماڵەوەم بەجێ هێشت بۆ ئەوەی بچم بۆ شار - Børnebøger for Danmark</title>
 	<meta name="description" content="Barnebøger for Danmark is designed specifically for teachers, parents, and community members and makes 40 stories from the African Storybook available with text and audio in Danish and English, as well as the most widely spoken languages of Denmark.
 ">
 	<link rel="stylesheet" href="/storybooks-danmark/css/spectre-ar.min.css">
@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0324">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0324">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0324">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0324">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0324">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0324">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0324">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0324">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0324">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0324">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0324">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0324">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0324">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0324">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0324">persisk</option>
@@ -80,7 +80,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl"><span class="def">ئەو ڕۆژەی ماڵەوەم جێهیشت بۆ ئەوەی بچم بۆ شار</span>
+		<h1 dir="rtl"><span class="def">ئەو ڕۆژەی ماڵەوەم بەجێ هێشت بۆ ئەوەی بچم بۆ شار</span>
 			<span dir="ltr" class="l1"></span>
 			<span dir="ltr" class="l2">The day I left home for the city</span>
 			<div class="btn-group">
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/ckb/0324/mp3/01.mp3"></audio>
 				<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) and dansk">da</button>
-				<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Lesley Koyi, Ursula Nafula</h3>
@@ -97,6 +97,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/ckb">kurdisk (sorani)</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/ckb/level3">Niveau 3</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/ckb/0324/ckb-0324_city.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -104,7 +105,7 @@
 <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	لە گوندەكەی ئێمە وێستگەیەكی بچوكی پاسی لێ بوو، كە پڕ بوو لە خەڵك و پاسی زۆری لێ ڕادەوستا. هەتا لە سەر زەویەكە شتی زۆری لێ بوو كە دەبوایە باركرابان. شاگردی شۆفیرەكان هەرای نێوی شوێنەكانیان دەكرد كە پاسەكان بۆی دەچوون.
+	لە گوندەكەی ئێمە وێستگەیەكی بچووكی بووسی لێ بوو، كە پڕ بوو لە خەڵك و بووسی زۆری لێ ڕادەوستا. لەسەر عەرزەکە شتێکی زۆری لێ بوو كە دەبوایە بار كرابان. شاگرد شۆفیرەكان هەرای ناوی شوێنەكانیان دەكرد كە بووسەكان بۆی دەچوون.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -122,7 +123,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -132,7 +133,7 @@
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	گوێم لە دەنگی شاگردشۆفیرێك بوو كە هەرای دەكرد: “شار” “شار” “وێستگەی ڕۆژئاوا!” ئەوە ئەو پاسە بوو كە من دەبوایە سوار بووبایەم.
+	گوێم لە دەنگی شاگردشۆفیرێك بوو كە هەرای دەكرد: “شار” “شار” “وێستگەی ڕۆژئاوا!” ئەوە ئەو بووسە بوو كە من دەبوایە سوار بوایەم.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -150,7 +151,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -160,7 +161,7 @@
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	پاسی شار هەمیشە پڕ بوو، بەڵام خەڵك هەر پاڵیان پێكەوە دەنا بۆئەوەی سواربن. هەندێك بارەكانی خۆیان دەخستە ناو سندوقچەكانی ژیر پاسەكە. ئەوانی دیكەش دەیانهێنایە ناو پاسەكەو لە سەر ڕەفەكانیان دادەنا.
+	بووسی شار هەمیشە پڕ بوو، بەڵام خەڵك هەر پاڵیان بە یەكترەوە دەنا بۆ ئەوەی سوار بن. هەندێك بارەكانی خۆیان دەخستە ناو سندووقی ژێر بووسەکەوە. ئەوانی دیكەش دەیانهێنایە ناو بووسەكە و لەسەر بارپێچەكانی ژوورەوەیان دادەنا.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -178,7 +179,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -188,7 +189,7 @@
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	مسافیرە نوێیەكان بڵیتەكانیان بە توندی لە ناودەستیان گرتبوو و لە ناو پاسە شلووقەكەدا بە دوای شوێنێكدا دەگەڕان دابنیشن. ژنەكان هەوڵیان دەدا شوێنێكی گونجاو بۆ مناڵەكانیان دروست بكەن لە سەفەرە دوور و درێژەكەیاندا.
+	گەشتیارە نوێیەكان بڵیتەكانیان بە توندی لەناو دەستیان گرتبوو و لەناو بووسە قەرەباڵغەكەدا بە دوای شوێنێكدا دەگەڕان دابنیشن. ژنەكان هەوڵیان دەدا شوێنێكی گونجاو بۆ مناڵەكانیان بدۆزنەوە لە گەشتە دوور و درێژەكەیاندا.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -206,7 +207,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -216,7 +217,7 @@
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/06.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	من بە زۆر شوێنی خۆم لە تەنیشت پەنجەرەیەكەوە كردەوە. ئەو پیاوەی لە تەیشت منەوە دانیشتبوو، كیسەیەكی سەوزی لە ناودەستدا بوو. ئەو سەندەڵێكی لە پێدا بوو لە گەڵ كۆتێكی كۆنە، ئەو پەشۆكاو دیاربوو.
+	من بەزۆر شوێنی خۆم لە تەنیشت پەنجەرەیەكەوە كردەوە. ئەو پیاوەی لە تەنیشت منەوە دانیشتبوو، كیسەیەكی سەوزی لەناو دەستدا بوو. ئەو سەندەڵێكی دەپێدا بوو، و كۆتێكی كۆنەشی پۆشیبوو. پیاوەكە پەشۆكاو دیار بوو.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -234,7 +235,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -244,7 +245,7 @@
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	لە پەنجەرەڕا تەماشای دەرێم دەكرد كە خەریك بوو لە گوندەكەم دوور دەكەوتمەوە. ئەو شوێنەی كە لێی گەورە ببووم. من دەمهەویست بچم بۆ شارە گەورەكە.
+	لە پەنجەرەكەوە سەیری دەرێم دەكرد كە خەریك بوو لە گوندەكەم دوور دەكەوتمەوە. ئەو شوێنەی كە لێی گەورە ببووم. من دەمهەویست بچم بۆ شارە گەورەكە.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -262,7 +263,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -272,7 +273,7 @@
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/08.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	هەموو كەل وپەلەكان باركران و مسافیرەكانیش لە شوێنەكانیان دانیشتن. دەستفرۆشەكان هێشتا هەر بە زۆر خۆیان بە ناو پاسەكەدا دەكرد بۆ ئەوەی شتەكانیان بە مسافیرەكان بفرۆشن. ئەوان هەرایان لە شتەكانیان دەكرد كە دەیانفرۆشتن. نێوی شتەكان زۆر سەیر بوون.
+	هەموو كەلوپەلەكان بار كران و گەشتیارەكانیش لە شوێنەكانیان دانیشتن. دەستفرۆشەكان هێشتا هەر بەزۆر خۆیان بەناو بووسەكەدا دەكرد بۆ ئەوەی شتەكانیان بە گەشتیارەكان بفرۆشن. ئەوان هەرایان بۆ ئەو شتانە دەكرد كە دەیانفرۆشتن. نێوی شتەكان زۆر سەیر بوون.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -290,7 +291,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -300,7 +301,7 @@
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/09.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	هەندێك لە مسافیرەكان خواردنەوەیان كڕی، ئەوانی دیكەش خواردنیان كڕی و دەیانخوارد. ئەوانەشی كە پارەیان نەبوو، وەكوو من، تەنها چاویان لێ دەكرد.
+	هەندێك لە گەشتیارەكان خواردنەوەیان كڕی، ئەوانی دیكەش خواردنیان كڕی و دەیانخوارد. ئەوانەشی كە پارەیان نەبوو، وەكوو من، تەنیا چاویان لێ دەكرد.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -318,7 +319,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -328,7 +329,7 @@
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/10.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	هەموو ئەم چالاكیانە لە گەڵ هەرای شۆفیر كە بەمانای ئامادەین بۆ ڕۆشتن، تەواو بوو. شاگردی شۆفیر هەرای كرد كە دەستفرۆشەكان دەبێ بچنە خوارێ.
+	 لەگەڵ هەرای شۆفیر، هەموو ئەو جموجۆڵانە کۆتاییان پێ هات. شاگردشۆفیرکە بە دەستفرۆشەكانی گوت دەبێ بچنە خوارەوە.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -346,7 +347,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -356,7 +357,7 @@
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/11.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	دەستفرۆشەكان پاڵیان بە یەكترەوە دەنا بۆ ئەوەی زوو لە پاسەكە بچنە خوارێ. هەندێك باقی پارەكانیان دەدایەوە بە مسافیرەكان. هەندێكی دیكەیان هەوڵیان دەدا لە كۆتا دەرفەتدا شتی زیاتر بفرۆشن.
+	دەستفرۆشەكان پاڵیان بە یەكترەوە دەنا بۆ ئەوەی زوو لە بووسەكە بچنە خوارەوە. هەندێك باقی پارەكانیان دەدایەوە بە گەشتیارەكان. هەندێكی دیكەشیان هەوڵیان دەدا لە كۆتا دەرفەتدا شتی زیاتر بفرۆشن.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -374,7 +375,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -384,7 +385,7 @@
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/12.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	كاتێ پاسەكە وێستگەكەی بە جێ هێشت، من لە پەنجەرە تەماشای دەرێم دەكرد. بیرم لەوە دەكردەوە كە ئایا جارێكی دیكە دەتوانم بگەڕێمەوە بۆ گوندەكە.
+	كاتێ بووسەكە وێستگەكەی بەجێ هێشت، من لە پەنجەرەكەوە سەیری دەرێم دەكرد. بیرم لەوە دەكردەوە كە ئایا جارێكی دیكە دەتوانم بگەڕێمەوە بۆ گوندەكەم.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -402,7 +403,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -412,7 +413,7 @@
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/13.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	كەم كەم بە درێژایی سەفەرەكەمان ناو پاسەكە گەرم بوو. من چاوەكانم چوقاند بە ئومێدی ئەوەی خەوم لێ بكەوێ.
+	وردە وردە، بە درێژایی گەشتەکەمان، هەوای ناو بووسەكە گەرم بوو. من چاوەكانم نووقاند بە ئومێدی ئەوەی كە خەوم لێ بكەوێ.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -430,7 +431,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -440,7 +441,7 @@
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/14.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	بەڵام هەر بیرم لای ماڵەوە بوو. ئایا دایكم سەلامەت دەبێ؟ ئایا دەتوانم هیچ قازانجێك لە كەروێشكەكانم بكەم. ئایا براكەم لە بیری دەبێ ئاوی درەختە نوێیەكانم بدات؟
+	بەڵام هەر بیرم لای ماڵەوە بوو. ئایا دایكم سەلامەت دەبێ؟ ئایا دەتوانم هیچ قازانجێك لە كەروێشكەكانم بكەم. ئایا براكەم لە بیری دەبێ درەختە ساواکانم ئاو بدات؟
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -458,7 +459,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -468,7 +469,7 @@
 <div id="text15" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/15.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	لە ڕێگا توانیم نێوی ئەو شارە گەورە لەبەربكەم كە مامم لێی دەژیا. نێوی شارەكەم لەبەر خۆمەوە دەكوتەوە تا ئەوەی خەوم لێ كەوت.
+	لە ڕێگا توانیم نێوی ئەو شارە گەورە لەبەر بكەم كە مامم لێی دەژیا. نێوی شارەكەم لەبەر خۆمەوە دەگوتەوە تا ئەوەی خەوم لێ كەوت.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -486,7 +487,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -496,7 +497,7 @@
 <div id="text16" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/16.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	نۆ كاتژمێر دواتر، بە دەنگی بەرزی پیاوێك وەخەبەر هاتم كە هرای مسافیرەكانی دەكرد بۆ گەڕانەوە بۆ گوندەكەم. منیش جانتا چكۆلەكەم هەڵگرت و لە پاسەكە هاتمە خوارێ.
+	نۆ كاتژمێر دواتر، بە دەنگی بەرزی پیاوێك بەخەبەر هاتم كە هەرای گەشتیارەكانی دەكرد بۆ گەڕانەوە بۆ گوندەكەم. منیش جانتا چكۆلەكەم هەڵگرت و لە پاسەكە هاتمە خوارەوە.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -514,7 +515,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -524,7 +525,7 @@
 <div id="text17" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/17.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
-	پاسەكە كە دەگەڕایەوە زۆر بە خێرای پڕ بوو. گرنگترین شت بۆمن ئێستا دیتنەوەی ماڵی مامم بوو.
+	بووسەكە دەگەڕایەوە، زۆر زوو پڕ بوو. گرنگترین شت بۆ من ئێستا دیتنەوەی ماڵی مامم بوو.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -542,7 +543,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -563,13 +564,13 @@
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Læs flere fortællinger på <a href="/storybooks-danmark/stories/ckb/level3">niveau 3</a>:</h5>
-			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0110/">یەك تۆوی بچووك، چیرۆكی وانگاری ماتای</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0110/">تۆوێكی بچووك، چیرۆكی وانگاری ماتای</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0066/">نوزیبلە و سێ تاڵە موو</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0141/">مریشك و هەزارپێ</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0201/">جاشك</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0315/">گۆرانیی سەكیما</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0006/">ئانانسی و ژیریی</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0158/">مریشك و هەڵۆ.</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0315/">گۆرانییەكەی سەكیما</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0006/">ئانانسی و زانایی</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0158/">مریشك و هەڵۆ</a></label>
 	</div>
 </div>
 <div>

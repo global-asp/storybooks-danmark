@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0111">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0111">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0111">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0111">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0111">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0111">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0111">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0111">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0111">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0111">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0111">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0111">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0111">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0111">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0111">persisk</option>
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/hi/0111/mp3/01.mp3"></audio>
 				<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi and dansk">da</button>
-				<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Basilio Gimo, David Ker</h3>
@@ -97,6 +97,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/hi">hindi</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/hi/level2">Niveau 2</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/hi/0111/hi-0111_hippos.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -122,7 +123,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -150,7 +151,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -180,7 +181,7 @@ Rabbit started screaming at Hippo, "You Hippo! Can't you see that you're steppin
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -190,7 +191,7 @@ Rabbit started screaming at Hippo, "You Hippo! Can't you see that you're steppin
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	दरियाई घोड़े ने खरगोश से माफ़ी मांगी, “माफ़ करना मुझे। मैंने तुमको नहीं देखा। मुझे माफ़ी दे दो!” लेकिन खरगोश ने उसकी बात नहीं सूना और वह दरियाई घोड़े पर चिलाने लगा, “तुमने जान बूझकर किया है! किसी दिन, तुम देखना! तुम्हे भुगतना पड़ेगा”
+	दरियाई घोड़े ने खरगोश से माफ़ी मांगी, “माफ़ करना मुझे। मैंने तुमको नहीं देखा। मुझे माफ़ी दे दो!” लेकिन खरगोश ने उसकी बात नहीं सुनी और वह दरियाई घोड़े पर चिल्लाने लगा, “तुमने जान बूझकर किया है! किसी दिन, तुम देखना! तुम्हे भुगतना पड़ेगा”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -210,7 +211,7 @@ But Rabbit wouldn't listen and he shouted at Hippo, "You did that on purpose! So
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -220,7 +221,7 @@ But Rabbit wouldn't listen and he shouted at Hippo, "You did that on purpose! So
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/06.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	खरगोश मैदान में लगी आग के पास गया और बोला “जाओ, दरियाई घोड़े को जला दो जब वह घास खाने पानी से बाहर आएगी। उसने मुझे पैरों के कुचला!” आग ने उत्तर दिया, “कोई समस्या नहीं, खरगोश मेरे दोस्त। मैं वही करूँगा जो तुमने कहा।”
+	खरगोश मैदान में लगी आग के पास गया और बोला “जाओ, दरियाई घोड़े को जला दो जब वह घास खाने पानी से बाहर आयेगी। उसने मुझे पैरों के कुचला!” आग ने उत्तर दिया, “कोई समस्या नहीं, खरगोश मेरे दोस्त। मैं वही करूँगा जो तुमने कहा।”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -240,7 +241,7 @@ Fire answered, "No problem, Rabbit, my friend. I'll do just what you ask."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -268,7 +269,7 @@ Fire answered, "No problem, Rabbit, my friend. I'll do just what you ask."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -278,7 +279,7 @@ Fire answered, "No problem, Rabbit, my friend. I'll do just what you ask."
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/08.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	दरियाई घोड़े ने रोना शुरू कर दिया और पानी के लिए दौड़ी। उसके सारे बाल आग से जल गए थे। दरियाई घोड़ा रो रही थी “मेरे बाल आग में जल गए!मेरे सारे बाल चले गए! मेरे सुंदर बाल!”
+	दरियाई घोड़े ने रोना शुरू कर दिया और पानी के लिए दौड़ी। उसके सारे बाल आग से जल गए थे। दरियाई घोड़ा रो रही थी “मेरे बाल आग में जल गए! मेरे सारे बाल चले गए! मेरे सुंदर बाल!”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -298,7 +299,7 @@ Hippo kept crying, "My hair has burned in the fire! My hair is all gone! My beau
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -328,7 +329,7 @@ And to this day, for fear of fire, the hippo never goes far from the water.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -357,8 +358,8 @@ And to this day, for fear of fire, the hippo never goes far from the water.
 			<label class="chip"><a href="/storybooks-danmark/stories/hi/0210/">टिनगी और उसकी गायें</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/hi/0342/">दंड</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/hi/0004/">बकरी, कुत्ता और गाय</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/hi/0234/">अंदिसवा फुटबॉल की सितारा</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/hi/0001/">एक बहुत लम्बा आदमी।</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/hi/0234/">अंदिस्वा फुटबॉल की सितारा</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/hi/0001/">एक बहुत लम्बा आदमी</a></label>
 	</div>
 </div>
 <div>

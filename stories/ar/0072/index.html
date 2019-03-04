@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0072">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0072">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0072">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0072">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0072">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0072">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0072">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0072">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0072">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0072">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0072">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0072">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0072">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0072">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0072">persisk</option>
@@ -80,7 +80,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl"><span class="def">انتقام طائر دليل المناحل</span>
+		<h1 dir="rtl"><span class="def">انتقام طائر دليل المناحل</span>
 			<span dir="ltr" class="l1"></span>
 			<span dir="ltr" class="l2">The Honeyguide’s revenge</span>
 			<div class="btn-group">
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/ar/0072/mp3/01.mp3"></audio>
 				<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk and dansk">da</button>
-				<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Zulu folktale</h3>
@@ -98,13 +98,14 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/ar">arabisk</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/ar/level4">Niveau 4</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/ar/0072/ar-0072_honeyguide.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
 
 <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	هذه قصة دليل المناحل، نجيد، وشاب يدعى جنجيل.
 في يوم من الأيام، كان جنجيل خارج البيت في رحلة صيد عندما سمع صوت نجيد، دليل المناحل. سال لعاب جنجيل، فقد ذكره صوت الطائر بطعم العسل، فتوقف وبدأ يستمع بانتباه ويبحث عن العصفور حتى لمحه بين أغصان الشجرة، فوق رأسه.
 خشخش العصفور الصغير “شتيك، شتيك، شتيك.” وهو يقفز من شجرة إلى أخرى متوقفا بين الفينة والفينة حتى يتأكد من أن جنجيل كان يتبعه.
@@ -134,7 +135,7 @@ sure that Gingile followed.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -143,7 +144,7 @@ sure that Gingile followed.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	بعد نصف ساعة، وصل الإثنان إلى شجرة تين ضخمة. أخذ نجيد يقفز من غصن إلى غصن ويطل برأسه على جنجيل وكأنما ليقول له: “ها أنا ذا، تعال الآن، ما الذي يجعلك بعيدا هكذا؟”.
 لم يستطع جنجيل أن يرى النحل من مكانه تحت الشجرة، غير أنه وثق بنجيد.
 	</h3></div>
@@ -173,7 +174,7 @@ Ngede.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -182,7 +183,7 @@ Ngede.
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	وضع جنجيل رمحه تحت الشجرة وجمع بعض الأغصان اليابسة وأشعل النار. وما إن توهج اللهب، حتى أخذ جنجيل عصا طويلة من خشب يابس ووضعها في النار لتحترق فتخرج دخانا كثيفا لدى احتراقها. ثم بدأ جنجيل يتسلق الشجرة حاملا العصا ذات الدخان الكثيف بين أسنانه ماسكا إياها من طرفها غير المحترق.
 	</h3></div>
 
@@ -212,7 +213,7 @@ teeth.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -221,7 +222,7 @@ teeth.
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	وسرعان ما سمع جنجيل أزيز النحل العالي وهو يدخل ويخرج من جوف جذع شجرة التين أين توجد الخلية. وعندما بلغ جنجيل خلية النحل، دفع بطرف العصا المدخن داخل جوف الشجرة. فهرع النحل إلى خارج الخلية ساخطاً مزمجراً وطار عالياً تاركاً المكان، لكن ليس قبل أن يكيل بعض اللدغات الموجعة لجنجيل.
 	</h3></div>
 
@@ -251,7 +252,7 @@ painful stings!
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -260,7 +261,7 @@ painful stings!
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	عندما ابتعد النحل، مد جنجيل يديه إلى الخلية في جوف الشجرة وبدأ يستخرج حفنات من أقراص الشمع المخضبة بالعسل والدهون واليرقات البيضاء. وضع جنجيل أقراص الشهد بكل عناية في حقيبته ونزل من أعلى الشجرة.
 	</h3></div>
 
@@ -286,7 +287,7 @@ and started to climb down the tree.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -295,7 +296,7 @@ and started to climb down the tree.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	كان نجيد يراقب بانتباه ما كان يفعله جنجيل وكان يأمل أن يكافئه بقطعة كبيرة من أقراص الشهد الملآنة بالعسل. فأخذ يرفرف من غصن إلى غصن ويقترب رويداً رويداً من الأرض حتى وصل إلى أسفل الشجرة. حط نجيد على صخرة على مقربة من جنجيل ومكث ينتظر أن يناوله مكافأته.
 	</h3></div>
 
@@ -324,7 +325,7 @@ boy and waited for his reward.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -333,7 +334,7 @@ boy and waited for his reward.
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	لكن جنجيل أطفا النار والتقط رمحه وعاد أدراجه إلى منزله متناسياً العصفور، دليل المناحل. صاح العصفور غاضباً: “فيكتور، فيكتور …”. توقف جنجيل عن السير وحدق في العصفور الصغير وانفجر ضاحكاً: ” هل تريد بعضا من العسل يا صديقي؟ لكن أنا من قام بالعمل كله وتحملت كل تلك اللدغات لوحدي… فلماذا إذن أقتسم هذا العسل الرائع معك؟”. ثم ذهب بعيداً. استشاط نجيد غضبا بعد أن تأكد من أن لا سبيل للتفاهم مع جنجيل وقرر بأن ينتقم لنفسه.
 	</h3></div>
 
@@ -360,7 +361,7 @@ his revenge.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -369,7 +370,7 @@ his revenge.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	وفي يوم من الأيام، وبعد بضعة أسابيع من ذلك اللقاء، سمع جنجيل صوت نجيد يبشر من جديد بوجود العسل. تذكر جنجيل طعم العسل اللذيذ وبدأ يتبع العصفور من جديد وبكل شغف. وبعد أن قاد العصفور جنجيل على طول حافة الغابة توقف ليستريح تحت شجرة كبيرة مظللة ذات أشواكٍ. فكر جنجيل: “أه… لا بد أن تكون خلية النحل في تلك الشجرة”.
 أسرع جنجيل بإشعال نار صغيرة وبدأ يتسلق الشجرة وعود الدخان بين أسنانه. في الأثناء كان نجيد قابعا يراقب عن كثب ما كان يحدث.
 	</h3></div>
@@ -395,7 +396,7 @@ watched.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -404,7 +405,7 @@ watched.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	تسلق جنجيل الشجرة مستغرباً من عدم سماع طنين النحل الذي تعود سماعه. وقال مخاطبا نفسه: “قد تكون الخلية في عمق الشجرة.” ثم واصل تسلق أغصان الشجرة، لكن حدث ما لم يحسب جنجيل حسابه، وعوض أن يجد خلية النحل، وجد نفسه محدقا في وجه نمرة كانت مغتاظة بعد أن وقع قطع نومها بكل تعسف. أغمضت النمرة عينيها وفتحت فمها وكشرت عن أنيابها الضخمة الحادة.
 	</h3></div>
 
@@ -429,7 +430,7 @@ and very sharp teeth.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -438,7 +439,7 @@ and very sharp teeth.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	وقبل أن تنقض عليه النمرة، أسرع جنجيل بالنزول من أعلى الشجرة، لكنه أخفق في مسك غصن من أغصان الشجرة وسقط مدوياً على الأرض فالتوى كاحله عند السقوط. واصل جنيجيل طريقه يعرج، بالسرعة التي يخولها له كاحله الملتوي. ولحسن حظه أن النمرة كانت لازالت تحت تأثير النعاس فلم تلحق به.
 انتقم نجيد، دليل المناحل، لنفسه ولقن جنجيل درسا لن ينساه.
 	</h3></div>
@@ -464,7 +465,7 @@ And Gingile learned his lesson.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -473,7 +474,7 @@ And Gingile learned his lesson.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	وهكذا، كلما سمع أبناء جنجيل قصة نجيد إلا واحترموا هذا العصفور الصغير. كما كانوا كلما ذهبوا لجمع العسل إلا وأصروا على أن يتركوا له أكبر قطعة من الشهد.
 	</h3></div>
 
@@ -497,7 +498,7 @@ of the comb for Honeyguide!
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 

@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0095">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0095">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0095">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0095">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0095">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0095">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0095">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0095">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0095">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0095">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0095">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0095">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0095">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0095">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0095">persisk</option>
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/nn/0095/mp3/01.mp3"></audio>
 				<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk and dansk">da</button>
-				<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Michael Oguttu</h3>
@@ -97,6 +97,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/nn">nynorsk</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/nn/level2">Niveau 2</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/nn/0095/nn-0095_zama.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -125,7 +126,7 @@ am great!
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
-		<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -154,7 +155,7 @@ the sun.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
-		<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -183,7 +184,7 @@ star," says Ma.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
-		<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -212,7 +213,7 @@ need any help.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
-		<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -242,7 +243,7 @@ soap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
-		<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -273,7 +274,7 @@ me!"
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
-		<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -304,7 +305,7 @@ day.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
-		<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -333,7 +334,7 @@ day.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
-		<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -362,7 +363,7 @@ and buckle my shoes.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
-		<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -392,7 +393,7 @@ school news.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
-		<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -421,7 +422,7 @@ every way.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
-		<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 	</div>
 </div>
 
@@ -453,7 +454,7 @@ play!
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
-		<button onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 	</div>
 </div>
 

@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0066">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0066">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0066">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0066">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0066">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0066">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0066">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0066">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0066">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0066">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0066">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0066">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0066">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0066">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0066">persisk</option>
@@ -80,7 +80,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl"><span class="def">نوزیبله و سه تار مو</span>
+		<h1 dir="rtl"><span class="def">نوزیبله و سه تار مو</span>
 			<span dir="ltr" class="l1"></span>
 			<span dir="ltr" class="l2">Nozibele and the three hairs</span>
 			<div class="btn-group">
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/fa/0066/mp3/01.mp3"></audio>
 				<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk and dansk">da</button>
-				<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Tessa Welch</h3>
@@ -98,13 +98,14 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/fa">persisk</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/fa/level3">Niveau 3</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/fa/0066/fa-0066_nozibele.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
 
 <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	در زمان های خیلی دور، سه دختر برای جمع آوری چوب به بیرون از خانه رفتند.
 	</h3></div>
 
@@ -124,7 +125,7 @@ out to collect wood.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -133,7 +134,7 @@ out to collect wood.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	روز گرمی بود بنابراین آنها به سمت رودخانه رفتند تا شنا کنند. آنها بازی کردند وآب بازی کردند و در آب شنا کردند.
 	</h3></div>
 
@@ -155,7 +156,7 @@ swam in the water.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -164,7 +165,7 @@ swam in the water.
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ناگهان، آنها فهمیدند که دیر شده است. آنها با عجله به روستا برگشتند.
 	</h3></div>
 
@@ -185,7 +186,7 @@ They hurried back to the village.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -194,7 +195,7 @@ They hurried back to the village.
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وقتی که نزدیک خانه بودند، نوزیبله دستش را روی گردنش گذاشت. او گردنبندش را فراموش کرده بود! او از دوستانش خواهش کرد، “خواهش می‌کنم با من بیایید!” ولی دوستانش گفتند الان خیلی دیر وقت است.
 	</h3></div>
 
@@ -218,7 +219,7 @@ But her friends said it was too late.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -227,7 +228,7 @@ But her friends said it was too late.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	بنابراین نوزیبله تنهایی به رودخانه برگشت. گردنبندش را پیدا کرد و با عجله به خانه برگشت. ولی او در تاریکی گم شد.
 	</h3></div>
 
@@ -250,7 +251,7 @@ But she got lost in the dark.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -259,7 +260,7 @@ But she got lost in the dark.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	در طول مسیرش او نوری را دید که ازیک کلبه ای می‌آمد. او با عجله به سمت آن را رفت ودر زد.
 	</h3></div>
 
@@ -281,7 +282,7 @@ at the door.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -290,7 +291,7 @@ at the door.
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	درکمال تعجب، یک سگ در را باز کرد وگفت، “چه می‌خواهی؟” نوزیبله گفت، “من گم شده ام وبرای خوابیدن دنبال جایی می‌گردم.”سگ گفت، “بیا داخل، وگرنه گازت می‌گیرم!” پس نوزیبله به داخل کلبه رفت.
 	</h3></div>
 
@@ -315,7 +316,7 @@ So Nozibele went in.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -324,7 +325,7 @@ So Nozibele went in.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	بعد سگ گفت، “برایم غذا بپز!” نوزیبله جواب داد، “ولی من تا حالا برای سگ آشپزی نکرده ام.” سگ گفت، “آشپزی کن وگرنه من تو را گاز می‌گیرم.” بنابراین نوزیبله مقداری غذا برای سگ درست کرد.
 	</h3></div>
 
@@ -348,7 +349,7 @@ the dog.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -357,7 +358,7 @@ the dog.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	سپس سگ گفت، “تختم را برایم مرتب کن!” نوزیبله در جواب گفت، “من تا به حال تخت سگ را مرتب نکرده ام.” سگ گفت، “تخت را مرتب کن وگرنه گازت می‌گیرم!” پس نوزیبله تخت را مرتب کرد.
 	</h3></div>
 
@@ -382,7 +383,7 @@ So Nozibele made the bed.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -391,7 +392,7 @@ So Nozibele made the bed.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	هر روز او مجبور بود که برای سگ آشپزی، جارو و شست و شو کند. سپس یک روز سگ گفت، “نوزیبله، امروز من باید به دیدن چند تا ازدوستانم بروم. خانه را جارو کن، غذا را درست کن و چیزهایم را بشورتا قبل از اینکه به خانه برگردم.
 	</h3></div>
 
@@ -416,7 +417,7 @@ before I come back."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -425,7 +426,7 @@ before I come back."
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	به محض اینکه سگ رفت، نوزیبله سه نخ از موهای سرش را کند. او یک نخ را زیر تخت، یکی را پشت در، و یکی را روی حصار گذاشت. سپس با سرعت هرچه تمام تر به سمت خانه دوید.
 	</h3></div>
 
@@ -451,7 +452,7 @@ could.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -460,7 +461,7 @@ could.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وقتی که سگ برگشت، دنبال نوزیبله گشت. داد زد، “نوزیبله تو کجایی؟” اولین تار مو گفت، “من اینجا هستم، زیر تخت.” تار موی دوم گفت، “من اینجا هستم، پشت در” تار موی سوم گفت، “من اینجا هستم، روی حصار.”
 	</h3></div>
 
@@ -488,7 +489,7 @@ third hair.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -497,7 +498,7 @@ third hair.
 
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/14.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	آنگاه سگ فهمید که نوزیبله به او حقه زده. پس او همه ی راه های روستا را دوید و دوید. ولی برادران نوزیبله با چوب های بزرگ آنجا ایستاده بودند. سگ برگشت وفرار کرد واز آن موقع به بعد ناپدید شد.
 	</h3></div>
 
@@ -523,7 +524,7 @@ has never been seen since.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('fa,da','da,en,fa')" class="btn btn-lg lang-primary" title="Switch between persisk og dansk">da</button>
-		<button onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('fa,en','da,en,fa')" class="btn btn-lg lang-secondary" title="Switch between persisk og engelsk">en</button>
 	</div>
 </div>
 

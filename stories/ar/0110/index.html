@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0110">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0110">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0110">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0110">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0110">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0110">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0110">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0110">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0110">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0110">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0110">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0110">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0110">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0110">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0110">persisk</option>
@@ -80,7 +80,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl"><span class="def">البذرة الصغيرة – حكاية ونقاري ماتهاي</span>
+		<h1 dir="rtl"><span class="def">البذرة الصغيرة – حكاية ونقاري ماتهاي</span>
 			<span dir="ltr" class="l1"></span>
 			<span dir="ltr" class="l2">A Tiny Seed: The Story of Wangari Maathai</span>
 			<div class="btn-group">
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/ar/0110/mp3/01.mp3"></audio>
 				<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk and dansk">da</button>
-				<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Nicola Rijsdijk</h3>
@@ -98,13 +98,14 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/ar">arabisk</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/ar/level3">Niveau 3</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/ar/0110/ar-0110_wangari.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
 
 <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	في قرية على منحدر جبل كينيا بشرق إفريقيا، كان هناك فتاة صغيرة تدعى ونقاري تعمل مع أمها في الحقول.
 	</h3></div>
 
@@ -124,7 +125,7 @@ fields with her mother. Her name was Wangari.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -133,7 +134,7 @@ fields with her mother. Her name was Wangari.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كانت ونقاري تحب الحياة خارج البيت فكنت أراها تعمل في حديقة منزل العائلة، تشق التربة بعصاها وتغرس الحبات الصغيرة في أديم الأرض الدافئ.
 	</h3></div>
 
@@ -153,7 +154,7 @@ with her machete. She pressed tiny seeds into the warm earth.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -162,7 +163,7 @@ with her machete. She pressed tiny seeds into the warm earth.
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وكانت أفضل فترات اليوم لديها هي فترة ما بعد الغروب، حين يسدل الليل ستاره ويحل الظلام. عندها تعرف ونقاري أن الوقت قد حان للعودة إلى المنزل فتحث خطاها إلى البيت متبعة المسالك الضيقة عبر الحقول، عابرة الأنهار التي تعترض طريقها.
 	</h3></div>
 
@@ -183,7 +184,7 @@ She would follow the narrow paths through the fields, crossing rivers as she wen
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -192,7 +193,7 @@ She would follow the narrow paths through the fields, crossing rivers as she wen
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كانت ونقاري فتاة ذكية وكانت شغوفة بالذهاب إلى المدرسة لكن أمها وأباها أراداها أن تبقى في المنزل لإعانتهما. لكن عندما بلغت سن السابعة من عمرها استطاع أخوها الأكبر إقناع والديها بأن يسمحا لها بالالتحاق بالمدرسة.
 	</h3></div>
 
@@ -214,7 +215,7 @@ go to school.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -223,7 +224,7 @@ go to school.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	شغفت ونقاري بالدراسة وكانت كلما قرأت كتاباً زاد شغفها بالتعلم. وحققت ونقاري نتائج باهرة في المدرسة مما مكنها من مواصلة دراستها بالولايات المتحدة الأمريكية. فرحت الفتاة كثيرا وزادت رغبتها في التعرف على العالم.
 	</h3></div>
 
@@ -245,7 +246,7 @@ Wangari was excited! She wanted to know more about the world.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -254,7 +255,7 @@ Wangari was excited! She wanted to know more about the world.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	تعلمت ونقاري العديد من الأشياء الجديدة في الجامعة الأمريكية وتلقت دروسا حول النباتات وكيفية نموها. استرجعت ونقاري ذكريات طفولتها عندما كانت تلعب مع إخوتها تحت ظل الأشجار في غابات كينيا الجميلة.
 	</h3></div>
 
@@ -275,7 +276,7 @@ brothers in the shade of the trees in the beautiful Kenyan forests.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -284,7 +285,7 @@ brothers in the shade of the trees in the beautiful Kenyan forests.
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وبقدر ما كانت تزداد علماً ودراسة بقدر ما كان حبها لشعب كينيا يزداد ويتعمق. كانت تريدهم أن يكونوا سعداء وأحراراً، فكانت كلما زاد علمها، زاد تعلقها بموطنها.
 	</h3></div>
 
@@ -305,7 +306,7 @@ The more she learnt, the more she remembered her African home.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -314,7 +315,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وعندما أنهت ونقاري دراستها رجعت إلى كينيا، لكنها اكتشفت أن كينيا قد تغيرت: كانت المزارع الشاسعة تمتد في جميع أنحاء الأرض بينما لم يكن للنساء حطباً لطهي الطعام وكان الناس فقراء والصغار جياعاً.
 	</h3></div>
 
@@ -336,7 +337,7 @@ children were hungry.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -345,7 +346,7 @@ children were hungry.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	عرفت ونقاري ما يجب عليها فعله. فعلمت النساء كيف يزرعن البذور، ونمت الأشجار وأصبحت النساء يبعن هذه الأشجار وبثمنها يعتنين بعائلاتهن. شعرت النساء بالسعادة، فقد ساعدتهن ونقاري على أن يكنَّ قويات فاعلات.
 	</h3></div>
 
@@ -367,7 +368,7 @@ strong.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -376,7 +377,7 @@ strong.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وبمرور الزمن، تحولت الأشجار إلى غابات وجرت الأنهار بالماء من جديد وانتشرت رسالة ونقاري في كامل أرجاء إفريقيا، ونمت ملايين الأشجار بفضل بذور ونقاري.
 	</h3></div>
 
@@ -397,7 +398,7 @@ Today, millions of trees have grown from Wangari's seeds.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -406,7 +407,7 @@ Today, millions of trees have grown from Wangari's seeds.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	لاحظ الناس في جميع أنحاء العالم تفاني ونقاري في العمل وقدموا لها جائزة شهيرة: إنها جائزة نوبل للسلام والتي كانت ونقاري أول امرأة افريقية تحصل عليها.
 	</h3></div>
 
@@ -431,7 +432,7 @@ receive it.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -440,7 +441,7 @@ receive it.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	توفيت ونقاري سنة 2011، لكننا نتذكرها في كل شجرة جميلة نراها حولنا.
 	</h3></div>
 
@@ -459,7 +460,7 @@ receive it.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 

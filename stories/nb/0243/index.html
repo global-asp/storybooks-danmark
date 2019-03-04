@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0243">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0243">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0243">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0243">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0243">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0243">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0243">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0243">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0243">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0243">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0243">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0243">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0243">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0243">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0243">persisk</option>
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/nb/0243/mp3/01.mp3"></audio>
 				<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål and dansk">da</button>
-				<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Violet Otieno</h3>
@@ -98,6 +98,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/nb">bokmål</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/nb/level4">Niveau 4</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/nb/0243/nb-0243_holidays.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -131,7 +132,7 @@ near a large lake.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -167,7 +168,7 @@ holiday.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -202,7 +203,7 @@ songs.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -231,7 +232,7 @@ tired and fell asleep.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -269,7 +270,7 @@ woman.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -279,7 +280,7 @@ woman.
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0243/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Nya-Kanyada ønsket dem velkommen og danset rundt i rommet mens hun sang av glede. Barnebarna hennes var begeistret over å overrekke gavene de hadde tatt med fra byen. “Åpne min gave først”, sa Odongo. “Nei, min gave først!” sa Apiyo.
+	Nyar-Kanyada ønsket dem velkommen og danset rundt i rommet mens hun sang av glede. Barnebarna hennes var begeistret over å overrekke gavene de hadde tatt med fra byen. “Åpne min gave først”, sa Odongo. “Nei, min gave først!” sa Apiyo.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -306,7 +307,7 @@ Odongo.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -337,7 +338,7 @@ way.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -367,7 +368,7 @@ and birds.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -397,7 +398,7 @@ lake.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -428,7 +429,7 @@ they were falling asleep!
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -458,7 +459,7 @@ leaving them with Nyar-Kanyada.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -493,7 +494,7 @@ from the garden.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -526,7 +527,7 @@ fish.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -563,7 +564,7 @@ into trouble again.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -599,7 +600,7 @@ that customers bought.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -630,7 +631,7 @@ count the money she earned.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -664,7 +665,7 @@ journey.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -700,7 +701,7 @@ again."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -729,7 +730,7 @@ her tightly and said goodbye.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 
@@ -766,7 +767,7 @@ had a wonderful grandmother!
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål og dansk">da</button>
-		<button onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 	</div>
 </div>
 

@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0089">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0089">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0089">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0089">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0089">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0089">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0089">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0089">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0089">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0089">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0089">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0089">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0089">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0089">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0089">persisk</option>
@@ -80,7 +80,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl"><span class="def">خَلَايْ تَتَحَدَّثُ إِلَى النَّبَاتَاتِ</span>
+		<h1 dir="rtl"><span class="def">خَلَايْ تَتَحَدَّثُ إِلَى النَّبَاتَاتِ</span>
 			<span dir="ltr" class="l1">Khalai taler med planter</span>
 			<span dir="ltr" class="l2">Khalai talks to plants</span>
 			<div class="btn-group">
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/ar/0089/mp3/01.mp3"></audio>
 				<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk and dansk">da</button>
-				<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Ursula Nafula</h3>
@@ -98,13 +98,14 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/ar">arabisk</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/ar/level2">Niveau 2</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/ar/0089/ar-0089_khalai.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
 
 <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	هَذِهِ خَلَايْ.
 عُمُرُهَا سَبْعُ سِنِينَ. مَعْنَى اِسْمِهَا “الشَّخْصُ الجَيِّدُ”.
 يُدْعَى فِي لُغَتِهَا “لُوبُوكُوزُو”.
@@ -129,7 +130,7 @@ language, Lubukusu.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -138,7 +139,7 @@ language, Lubukusu.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	تَسْتَيْقِظُ خَلَايْ كُلَّ صَبَاحٍ وَتَقُولُ لِشَجَرَةِ البُرْتُقَالِ: “أَرْجُوكِ يَا شَجَرَةَ البُرْتُقَالِ، اكْبَرِي، وَاعْطِنَا الكَثِيرَ مِنَ البُرْتُقَالِ الطًازَجِ”.
 	</h3></div>
 
@@ -161,7 +162,7 @@ lots of ripe oranges."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -170,7 +171,7 @@ lots of ripe oranges."
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	تَمْشِي خَلَايْ إِلَى المَدْرَسَةِ، وَفِي طَرِيقِهَا تَتَحَدَّثُ مَعَ الأَعْشَابِ.
 “أَرْجُوكِ أَيَّتُهَا الأَعْشَابُ، اكْبَرِي وَابْقَيْ خَضْرَاءَ وَلَا تَجُفّيِ”.
 	</h3></div>
@@ -194,7 +195,7 @@ and don't dry up."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -203,7 +204,7 @@ and don't dry up."
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	تَمُرُّ خَلَايْ أَمَامَ الأَزْهَارِ البَرِّيَّةِ.
 “أَرْجُوكِ أَيَّتُهَا الأَزْهَارُ، اِبْقَيْ مُزْهِرَةً لِأَسْتَطِيعَ أَنْ أَضَعَكِ فَوْقَ شَعْرِي”.
 	</h3></div>
@@ -227,7 +228,7 @@ hair."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -236,7 +237,7 @@ hair."
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	فِي المَدْرَسِةِ، تَتَحَدَّثُ خَلَايْ مَعَ الشَّجَرَةِ التِي فِي مُنْتَصَفِ المَبْنَى.
 “أَرْجُوكِ أَيَتُهَا اَلشَّجَرَةُ، مُدِّي أَغْصانَكِ الكَبيرَةَ لِنَسْتَطيعَ اَلقِراءَةَ تَحْتَ ظِلِكِ”.
 	</h3></div>
@@ -262,7 +263,7 @@ read under your shade."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -271,7 +272,7 @@ read under your shade."
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	تَتَحَدَثُ خَلَايْ مَع اَلشُّجيراتِ الصَّغيرَةِ.
 “أَرجوكِ، اِكْبَري وَكُونِي قَويَّةً لِتَمْنَعِي الأَشْخَاصَ السيِّئينَ مِنَ اَلدُخُولِ”.
 	</h3></div>
@@ -295,7 +296,7 @@ from coming in."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -304,7 +305,7 @@ from coming in."
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	عِنْدَمَا تَعَودُ خَلَايْ إِلَى البَيْتِ، تَزُورُ شَجَرَةَ اَلبُرتُقالِ، وتَسْأَلُهَا: “أَلَمْ يُصْبِحْ بُرْتُقَالِكِ طَازَجًا بَعْدُ؟”
 	</h3></div>
 
@@ -327,7 +328,7 @@ yet?" asks Khalai.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -336,7 +337,7 @@ yet?" asks Khalai.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	تَتَنَهَّدُ خَلَايْ: “اَلبُرْتُقالُ لَازَالَ أَخْضَراً”.
 ثُمَّ تَقُولُ: “سَوفَ أَرَاكِ يَا شَجَرَةَ اَلبُرْتُقالَ غَداً، بَعْدَهَا رُبَّمَا سَيكُونُ لَدَيْكِ بُرْتُقالاً طَازَجاً لِي”.
 	</h3></div>
@@ -362,7 +363,7 @@ orange for me!"
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ar,da','da,en,ar')" class="btn btn-lg lang-primary" title="Switch between arabisk og dansk">da</button>
-		<button onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ar,en','da,en,ar')" class="btn btn-lg lang-secondary" title="Switch between arabisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -385,15 +386,15 @@ orange for me!"
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Læs flere fortællinger på <a href="/storybooks-danmark/stories/ar/level2">niveau 2</a>:</h5>
 			<label class="chip"><a href="/storybooks-danmark/stories/ar/0337/">أَطْفَالُ الشَّمْعِ</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/ar/0111/">لِمَاذَا لاَ تَمْلِكُ أَفْرَاسُ اَلْنَّهْرِ شَعْراً</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ar/0095/">زَامَا المُمَيَّزةْ!</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ar/0027/">القَرَارُ</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/ar/0296/">تُومْ، بَائِعُ المَوْزِ</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/ar/0111/">لِمَاذَا لاَ تَمْلِكُ أَفْرَاسُ اَلْنَّهْرِ شَعْراً</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ar/0210/">تِينْغِي وَ البَقَرُ</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ar/0342/">العِقَابُ</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ar/0004/">المَاعِزُ وَالكَلْبُ وَالبَقَرَةُ</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ar/0234/">أَنْدِيسُوا نَجْمَةُ كُرَةِ اَلقَدَمِ</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ar/0001/">الرَّجُلُ ذُو القَامَةِ الطَّويلَةِ</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/ar/0296/">تُومْ، بَائِعُ المَوْزِ</a></label>
 	</div>
 </div>
 <div>

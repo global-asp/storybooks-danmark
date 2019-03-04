@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0201">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0201">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0201">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0201">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0201">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0201">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0201">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0201">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0201">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0201">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0201">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0201">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0201">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0201">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0201">persisk</option>
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/ur/0201/mp3/01.mp3"></audio>
 				<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu and dansk">da</button>
-				<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Lindiwe Matshikiza</h3>
@@ -98,6 +98,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/ur">urdu</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/ur/level3">Niveau 3</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/ur/0201/ur-0201_donkey.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -123,7 +124,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -151,7 +152,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -181,7 +182,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -217,7 +218,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -247,7 +248,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -279,7 +280,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -311,7 +312,7 @@ She wondered what to do with herself.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -339,7 +340,7 @@ She wondered what to do with herself.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -369,7 +370,7 @@ And no matter how hard he tried, he could not behave like a human being. His mot
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -399,7 +400,7 @@ He became so angry that, one day, he kicked his mother to the ground.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -427,7 +428,7 @@ He became so angry that, one day, he kicked his mother to the ground.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -461,7 +462,7 @@ Curling himself into a tight ball, he fell into a deep and troubled sleep.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -489,7 +490,7 @@ Curling himself into a tight ball, he fell into a deep and troubled sleep.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -519,7 +520,7 @@ Donkey listened and learned, and so did the old man. They helped each other, and
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -547,7 +548,7 @@ Donkey listened and learned, and so did the old man. They helped each other, and
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -579,7 +580,7 @@ And when he woke up...
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -607,7 +608,7 @@ And when he woke up...
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -635,7 +636,7 @@ And when he woke up...
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -665,7 +666,7 @@ And then hugged each other very hard.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 
@@ -695,7 +696,7 @@ Slowly, all around them, other families have started to settle.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ur,da','da,en,ur')" class="btn btn-lg lang-primary" title="Switch between urdu og dansk">da</button>
-		<button onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ur,en','da,en,ur')" class="btn btn-lg lang-secondary" title="Switch between urdu og engelsk">en</button>
 	</div>
 </div>
 

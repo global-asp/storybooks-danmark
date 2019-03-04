@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0066">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0066">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0066">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0066">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0066">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0066">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0066">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0066">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0066">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0066">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0066">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0066">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0066">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0066">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0066">persisk</option>
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/om/0066/mp3/01.mp3"></audio>
 				<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo and dansk">da</button>
-				<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Tessa Welch</h3>
@@ -97,6 +97,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/om">oromo</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/om/level3">Niveau 3</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/om/0066/om-0066_nozibele.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -123,7 +124,7 @@ out to collect wood.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -154,7 +155,7 @@ swam in the water.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -184,7 +185,7 @@ They hurried back to the village.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -217,7 +218,7 @@ But her friends said it was too late.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -249,7 +250,7 @@ But she got lost in the dark.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -280,7 +281,7 @@ at the door.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -314,7 +315,7 @@ So Nozibele went in.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -347,7 +348,7 @@ the dog.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -381,7 +382,7 @@ So Nozibele made the bed.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -415,7 +416,7 @@ before I come back."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -450,7 +451,7 @@ could.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -487,7 +488,7 @@ third hair.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -522,7 +523,7 @@ has never been seen since.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -543,13 +544,13 @@ has never been seen since.
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Læs flere fortællinger på <a href="/storybooks-danmark/stories/om/level3">niveau 3</a>:</h5>
-			<label class="chip"><a href="/storybooks-danmark/stories/om/0110/">Sagni Xinno: Seenaa Wangaarii Matayi</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0141/">Lukkuu fi dhimillee</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0201/">Ilimo Harre</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0315/">Sirba Sakiimaa</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0006/">Anaanis fi Ogummaa</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/om/0324/">Guyyan gara magaala deeme</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/om/0110/">Sagni Xinno: Seenaa Wangaarii Matayi</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0158/">Lukkuu fi Risaa</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/om/0324/">Guyyan gara magaala deeme</a></label>
 	</div>
 </div>
 <div>

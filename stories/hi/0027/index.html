@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0027">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0027">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0027">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0027">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0027">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0027">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0027">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0027">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0027">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0027">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0027">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0027">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0027">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0027">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0027">persisk</option>
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/hi/0027/mp3/01.mp3"></audio>
 				<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi and dansk">da</button>
-				<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Ursula Nafula</h3>
@@ -97,6 +97,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/hi">hindi</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/hi/level2">Niveau 2</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/hi/0027/hi-0027_decision.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -104,7 +105,7 @@
 <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0027/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	मेरे गांव में बहुत सारी समस्याएं थीं। हमे नल से पानी लेने के लिए बहुत लंबी लाइन लगानी पड़ती थी।
+	मेरे गांव में बहुत सारी समस्याँये थीं। हमे नल से पानी लेने के लिए बहुत लंबी कतार लगानी पड़ती थी।
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -124,7 +125,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -152,7 +153,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -162,7 +163,7 @@ We made a long line to fetch water from one tap.
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0027/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	चोरों के कारण हमें अपने अगर जल्दी बंद करने पड़ते थे।
+	चोरों के कारण हमें अपने घर जल्दी बंद करने पड़ते थे।
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -180,7 +181,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -208,7 +209,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -236,7 +237,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -264,7 +265,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -274,7 +275,7 @@ We made a long line to fetch water from one tap.
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0027/08.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	जब हवा चलती तो बेकार पड़े कागज़ पेड़ों और बाडों से लटक जाते थे।
+	जब हवा चलती तो बेकार पड़े कागज़ पेड़ों और बाड़ों से लटक जाते थे।
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -292,7 +293,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -320,7 +321,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -330,7 +331,7 @@ We made a long line to fetch water from one tap.
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0027/10.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	एक दिन, नल सुख गया और हमारे बर्तन खाली रह गए।
+	एक दिन, नल सूख गया और हमारे बर्तन खाली रह गए।
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -348,7 +349,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -358,7 +359,7 @@ We made a long line to fetch water from one tap.
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0027/11.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	मेरे पिता ने घर घर जाकर लोगों से अपील की कि वो गांव की बैठक में आए।
+	मेरे पिता ने घर घर जाकर लोगों से विनती की कि वो गांव की बैठक में आए।
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -376,7 +377,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -404,7 +405,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -432,7 +433,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -460,7 +461,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -488,7 +489,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -516,7 +517,7 @@ We made a long line to fetch water from one tap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -526,7 +527,7 @@ We made a long line to fetch water from one tap.
 <div id="text17" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0027/17.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	हम ने एक साथ एक स्वर में ज़ोर से कहा “हमे अपनी ज़िंदगी जरूर बदलेंगे”। उस दिन से हम अपनी समस्याओं को हल करने के लिए साथ काम करते हैं।
+	हम ने एक साथ एक स्वर में ज़ोर से कहा “हम अपनी ज़िंदगी जरूर बदलेंगे”। उस दिन से हम अपनी समस्याओं को हल करने के लिए साथ काम करते हैं।
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -546,7 +547,7 @@ From that day we worked together to solve our problems.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hi,da','da,en,hi')" class="btn btn-lg lang-primary" title="Switch between hindi og dansk">da</button>
-		<button onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('hi,en','da,en,hi')" class="btn btn-lg lang-secondary" title="Switch between hindi og engelsk">en</button>
 	</div>
 </div>
 
@@ -575,8 +576,8 @@ From that day we worked together to solve our problems.
 			<label class="chip"><a href="/storybooks-danmark/stories/hi/0210/">टिनगी और उसकी गायें</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/hi/0342/">दंड</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/hi/0004/">बकरी, कुत्ता और गाय</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/hi/0234/">अंदिसवा फुटबॉल की सितारा</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/hi/0001/">एक बहुत लम्बा आदमी।</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/hi/0234/">अंदिस्वा फुटबॉल की सितारा</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/hi/0001/">एक बहुत लम्बा आदमी</a></label>
 	</div>
 </div>
 <div>

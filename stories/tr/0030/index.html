@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0030">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0030">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0030">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0030">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0030">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0030">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0030">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0030">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0030">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0030">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0030">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0030">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0030">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0030">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0030">persisk</option>
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/tr/0030/mp3/01.mp3"></audio>
 				<button onclick="switchlang('tr,da','da,en,tr')" class="btn btn-lg lang-primary" title="Switch between tyrkisk and dansk">da</button>
-				<button onclick="switchlang('tr,en','da,en,tr')" class="btn btn-lg lang-secondary" title="Switch between tyrkisk og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('tr,en','da,en,tr')" class="btn btn-lg lang-secondary" title="Switch between tyrkisk og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Clare Verbeek, Thembani Dladla, Zanele Buthelezi</h3>
@@ -98,6 +98,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/tr">tyrkisk</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/tr/level1">Niveau 1</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/tr/0030/tr-0030_feelings.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -124,7 +125,7 @@ things.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tr,da','da,en,tr')" class="btn btn-lg lang-primary" title="Switch between tyrkisk og dansk">da</button>
-		<button onclick="switchlang('tr,en','da,en,tr')" class="btn btn-lg lang-secondary" title="Switch between tyrkisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('tr,en','da,en,tr')" class="btn btn-lg lang-secondary" title="Switch between tyrkisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -154,7 +155,7 @@ in the evening.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tr,da','da,en,tr')" class="btn btn-lg lang-primary" title="Switch between tyrkisk og dansk">da</button>
-		<button onclick="switchlang('tr,en','da,en,tr')" class="btn btn-lg lang-secondary" title="Switch between tyrkisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('tr,en','da,en,tr')" class="btn btn-lg lang-secondary" title="Switch between tyrkisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -183,7 +184,7 @@ with my friend.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tr,da','da,en,tr')" class="btn btn-lg lang-primary" title="Switch between tyrkisk og dansk">da</button>
-		<button onclick="switchlang('tr,en','da,en,tr')" class="btn btn-lg lang-secondary" title="Switch between tyrkisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('tr,en','da,en,tr')" class="btn btn-lg lang-secondary" title="Switch between tyrkisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -213,7 +214,7 @@ money.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tr,da','da,en,tr')" class="btn btn-lg lang-primary" title="Switch between tyrkisk og dansk">da</button>
-		<button onclick="switchlang('tr,en','da,en,tr')" class="btn btn-lg lang-secondary" title="Switch between tyrkisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('tr,en','da,en,tr')" class="btn btn-lg lang-secondary" title="Switch between tyrkisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -242,7 +243,7 @@ mom gives me a hug.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tr,da','da,en,tr')" class="btn btn-lg lang-primary" title="Switch between tyrkisk og dansk">da</button>
-		<button onclick="switchlang('tr,en','da,en,tr')" class="btn btn-lg lang-secondary" title="Switch between tyrkisk og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('tr,en','da,en,tr')" class="btn btn-lg lang-secondary" title="Switch between tyrkisk og engelsk">en</button>
 	</div>
 </div>
 
@@ -266,9 +267,9 @@ mom gives me a hug.
 		<h5>Læs flere fortællinger på <a href="/storybooks-danmark/stories/tr/level1">niveau 1</a>:</h5>
 			<label class="chip"><a href="/storybooks-danmark/stories/tr/0112/">Vücudüm</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/tr/0009/">Benim kedim nerede?</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/tr/0327/">Hayvan sayımı</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/tr/0067/">Yemek pişirmek</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/tr/0129/">Küçük tembel erkek kardeş</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/tr/0327/">Hayvan sayımı</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/tr/0002/">Hayvanlara bak</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/tr/0003/">Okul kıyafetleri</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/tr/0271/">İki</a></label>

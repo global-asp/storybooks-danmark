@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0342">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0342">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0342">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0342">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0342">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0342">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0342">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0342">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0342">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0342">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0342">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0342">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0342">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0342">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0342">persisk</option>
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/ckb/0342/mp3/01.mp3"></audio>
 				<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) and dansk">da</button>
-				<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Adelheid Marie Bwire</h3>
@@ -97,6 +97,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/ckb">kurdisk (sorani)</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/ckb/level2">Niveau 2</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/ckb/0342/ckb-0342_punishment.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -123,7 +124,7 @@ lot of fruit.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -133,7 +134,7 @@ lot of fruit.
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0342/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	ئێمە پرسیمان كەی دەتوانین كەمێ میوە بخۆین؟ دایە ووتی: شەو میوە دەخۆین.
+	ئێمە پرسیمان: “كەی دەتوانین كەمێ میوە بخۆین؟” دایە گوتی: “شەوێ میوە دەخۆین.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -154,7 +155,7 @@ tonight," says mama.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -164,7 +165,7 @@ tonight," says mama.
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0342/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	ڕەحیمی برام نەوسن بوو. ئەو تامی هەموو میوەكانی كرد و زۆرێك لە میوەكانی خوارد.
+	ڕەحیمی برام نەوسن بوو. ئەو تامی هەموو میوەكانی كرد. ئەو زۆربەی میوەكانی خوارد.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -184,7 +185,7 @@ fruit. He eats a lot of it.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -194,7 +195,7 @@ fruit. He eats a lot of it.
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0342/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	برا بچووكەكەم هاواری كرد: چاو ڕەحیم چی كردووە. منیش ووتم ڕەحیم كەسێكی خراپ و خۆپەرەستە.
+	برا بچووكەكەم هاواری كرد: “چاو ڕەحیم چی كردووە.” منیش گوتم: “ڕەحیم كەسێكی خراپ و خۆپەرەستە.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -216,7 +217,7 @@ say.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -226,7 +227,7 @@ say.
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0342/06.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	دایە لە ڕەحیم توڕە بوو.
+	دایە لە ڕەحیم تووڕە بوو.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -245,7 +246,7 @@ Rahim.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -255,7 +256,7 @@ Rahim.
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0342/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	هەروەها ئێمەش لە ڕەحیم توڕە بووین . بەڵام ڕەحیم هیچ پەشیمان نەبوو.
+	هەروەها ئێمەش لە ڕەحیم تووڕە بووین، بەڵام ڕەحیم هیچ پەشیمان نەبوو.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -275,7 +276,7 @@ sorry.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -285,7 +286,7 @@ sorry.
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0342/08.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	برا بچوكەكەم ووتی: تۆ ناتهەوێ سزای ڕەحیم بدەی؟
+	“برا بچووكەكەم پرسی: “تۆ ناتهەوێ سزای ڕەحیم بدەی؟
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -305,7 +306,7 @@ little brother.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -315,7 +316,7 @@ little brother.
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0342/09.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	دایە ڕەحیمی ئاگادار كردەوە: ڕەحیم بە زووی لەم كارەت پەشیمان دەبیەوە.
+	دایە ڕەحیمی ئاگادار كردەوە: “ڕەحیم، بە زوویی لەم كارەت پەشیمان دەبیتەوە.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -334,7 +335,7 @@ be sorry," warns mama.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -344,7 +345,7 @@ be sorry," warns mama.
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0342/10.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	ڕەحیم كەم كەم هەستی بە ناساغی دەكرد.
+	ڕەحیم وردە وردە هەستی بە ناساغی دەكرد.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -363,7 +364,7 @@ sick.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -373,7 +374,7 @@ sick.
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0342/11.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	ڕەحیم بە سرتەوە دەیگووت: زگم زۆر دێشێت.
+	ڕەحیم بە سرتە دەیگوت: “سكم زۆر دێشێت.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -392,7 +393,7 @@ whispers Rahim.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -402,7 +403,7 @@ whispers Rahim.
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0342/12.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	دایە دەیزانی ئاوای لێ دێ. میوەكان سزای ڕەحیمیان دا!
+	دایە دەیزانی ئاوای لێ بەسەر دێ. میوەكە سزای ڕەحیمی دەدا!
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -422,7 +423,7 @@ punishing Rahim!
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -432,7 +433,7 @@ punishing Rahim!
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0342/13.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
-	لە كۆتایدا ڕەحیم داوای لێ بوردنی لێ كردین. ئەو بەڵێنی دا كە جارێكی دیكە ئاوا زۆرخۆر نەبێ. ئێمە هەموومان باوەڕمان پێ كرد.
+	لە كۆتاییدا ڕەحیم داوای لێبوردنی لێ كردین. ئەو بەڵێنی دا كە جارێكی دیكە ئاوا زۆرخۆر نەبێ. ئێمە هەموومان باوەڕمان پێ كرد.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -454,7 +455,7 @@ believe him.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ckb,da','da,en,ckb')" class="btn btn-lg lang-primary" title="Switch between kurdisk (sorani) og dansk">da</button>
-		<button onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('ckb,en','da,en,ckb')" class="btn btn-lg lang-secondary" title="Switch between kurdisk (sorani) og engelsk">en</button>
 	</div>
 </div>
 
@@ -475,16 +476,16 @@ believe him.
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Læs flere fortællinger på <a href="/storybooks-danmark/stories/ckb/level2">niveau 2</a>:</h5>
-			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0337/">منداڵانی مۆمی</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0337/">منداڵانی لە مۆم دروستكراو</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0111/">بۆچی كەرگەدەن مووی نییە</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0095/">زاما زیرەكە</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0089/">خەلای لە گەڵ ڕووەكەكان قسە دەكات</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0089/">خەلای لەگەڵ ڕووەكەكان قسە دەكات</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0027/">بڕیاردان</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0296/">تۆمی مۆز فرۆش</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0210/">تینگی و مانگاكان</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0004/">بزن و سەگ و مانگا</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0234/">ئاندیسوا، پاڵەوانی تۆپی پێ</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0001/">پیاوێكی زۆر درێژ</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/ckb/0004/">بزن و سەگ و مانگا</a></label>
 	</div>
 </div>
 <div>

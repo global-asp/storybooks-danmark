@@ -52,15 +52,15 @@
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Ændre sprog</option>
 		<option value="/storybooks-danmark/stories/da/0120">dansk</option>
-		<option value="/storybooks-danmark/stories/en/0120">engelsk</option>
 		<option value="/storybooks-danmark/stories/am/0120">amharisk</option>
 		<option value="/storybooks-danmark/stories/ar/0120">arabisk</option>
-		<option value="/storybooks-danmark/stories/nb/0120">bokmål</option>
+		<option value="/storybooks-danmark/stories/en/0120">engelsk</option>
 		<option value="/storybooks-danmark/stories/tl/0120">filippinsk</option>
 		<option value="/storybooks-danmark/stories/fr/0120">fransk</option>
 		<option value="/storybooks-danmark/stories/it/0120">italiensk</option>
 		<option value="/storybooks-danmark/stories/zh/0120">kinesisk</option>
 		<option value="/storybooks-danmark/stories/ckb/0120">kurdisk (sorani)</option>
+		<option value="/storybooks-danmark/stories/nb/0120">norsk (bokmål)</option>
 		<option value="/storybooks-danmark/stories/nn/0120">nynorsk</option>
 		<option value="/storybooks-danmark/stories/om/0120">oromo</option>
 		<option value="/storybooks-danmark/stories/fa/0120">persisk</option>
@@ -88,7 +88,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/om/0120/mp3/01.mp3"></audio>
 				<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo and dansk">da</button>
-				<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+				<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Clare Verbeek, Thembani Dladla, Zanele Buthelezi</h3>
@@ -97,6 +97,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/om">oromo</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/om/level1">Niveau 1</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/om/0120/om-0120_hair.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -122,7 +123,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -150,7 +151,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -179,7 +180,7 @@ hair.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -208,7 +209,7 @@ hair.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -236,7 +237,7 @@ hair.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -265,7 +266,7 @@ hair.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -293,7 +294,7 @@ hair.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -322,7 +323,7 @@ hair.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('om,da','da,en,om')" class="btn btn-lg lang-primary" title="Switch between oromo og dansk">da</button>
-		<button onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
+		<button style="display:none" onclick="switchlang('om,en','da,en,om')" class="btn btn-lg lang-secondary" title="Switch between oromo og engelsk">en</button>
 	</div>
 </div>
 
@@ -349,14 +350,14 @@ hair.
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0067/">Bilcheessu</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0129/">Obboleesa Xinnaa Da’iifa</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0030/">Miiraa Kenya</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/om/0003/">Offata mana Barmusaa.</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0002/">Belladoota kan ilaali</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/om/0003/">Offata mana Barmusaa.</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/om/0271/">Lama</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0008/">Maal hojjechaa jirta?</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/om/0156/">Naacha Bela’aa</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0231/">Kitaaba Hala qilensaa</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0302/">Ibbidda</a></label>
 			<label class="chip"><a href="/storybooks-danmark/stories/om/0087/">Dubbisun jalladha</a></label>
-			<label class="chip"><a href="/storybooks-danmark/stories/om/0271/">Lama</a></label>
+			<label class="chip"><a href="/storybooks-danmark/stories/om/0156/">Naacha Bela’aa</a></label>
 	</div>
 </div>
 <div>

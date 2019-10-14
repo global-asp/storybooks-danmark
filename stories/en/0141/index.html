@@ -75,7 +75,7 @@
 	</select>
 </div>
 
-        <a class="btn btn-lg" href="/storybooks-danmark/stories/en" class="button">Tilbage til fortællingerne</a><br><br>
+        <a class="btn btn-lg" href="/storybooks-danmark/stories/en">Tilbage til fortællingerne</a><br><br>
 
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/01.jpg"></div>
@@ -83,21 +83,21 @@
 		<h1><span class="def">Chicken and Millipede</span>
 			<span class="l1">Kylling og Tusindben</span>
 			<span class="l2">Chicken and Millipede</span>
-			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
-				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/en/0141/mp3/01.mp3"></audio>
-				<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk and dansk">da</button>
-				<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
-			</div>
 		</h1>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af" width="38px"></span> Winny Asara</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Illustreret af"><img class="cover-icon" src="/storybooks-danmark/css/art.svg" alt="Illustreret af" width="38px"></span> Magriet Brink</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Læst af"><img class="cover-icon" src="/storybooks-danmark/css/megaphone.svg" alt="Læst af" width="38px"></span> Darshan Soni</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog" width="38px"></span> <a href="/storybooks-danmark/stories/en">engelsk</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau" width="38px"></span> <a href="/storybooks-danmark/stories/en/level3">Niveau 3</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/en/0141/en-0141_chicken.mp3" type="audio/mpeg"></audio></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
+		<div class="btn-group cover-buttons">
+			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/en/0141/mp3/01.mp3"></audio>
+			<button onclick="switchlang('en,da','da,en,en')" class="btn btn-lg lang-primary" title="Switch between engelsk and dansk">da</button>
+			<button style="display:none" onclick="switchlang('en,en','da,en,en')" class="btn btn-lg lang-secondary" title="Switch between engelsk og engelsk">en</button>
+		</div>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af"></span> Winny Asara</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Illustreret af"><img class="cover-icon" src="/storybooks-danmark/css/art.svg" alt="Illustreret af"></span> Magriet Brink</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Læst af"><img class="cover-icon" src="/storybooks-danmark/css/megaphone.svg" alt="Læst af"></span> Darshan Soni</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog"></span> <a href="/storybooks-danmark/stories/en">engelsk</a></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau"></span> <a href="/storybooks-danmark/stories/en/level3">Niveau 3</a></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/en/0141/en-0141_chicken.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -455,7 +455,7 @@ Mother Millipede was worried.
 		<h5><a href="/storybooks-danmark/stories/en/level3">Niveau 3</a></h5>
 		<h5>Kilde: <a href="https://africanstorybook.org/reader.php?id=9094" target="_blank">Chicken and Millipede</a> fra <a href="https://africanstorybook.org/">African Storybook</a></h5>
 
-		<left><a rel="license" href="https://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />Dette værk er licenseret under en <a rel="license" href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Navngivelse 3.0 International licens</a>.</left>
+		<div><a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.da" target="_blank"><img alt="Creative Commons licens" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />Dette værk er licenseret under en <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.da" target="_blank">Creative Commons Navngivelse 3.0 International licens</a>.</div>
 
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">

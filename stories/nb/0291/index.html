@@ -16,13 +16,16 @@
 	<meta name="description" content="Barnebøger for Danmark is designed specifically for teachers, parents, and community members and makes 40 stories from the African Storybook available with text and audio in Danish and English, as well as the most widely spoken languages of Denmark.
 ">
 	<link rel="stylesheet" href="/storybooks-danmark/css/spectre.min.css">
+	<link rel="stylesheet" href="/storybooks-danmark/css/gsn.min.css">
 	<link rel="stylesheet" href="/storybooks-danmark/css/fontello.min.css">
 	<link rel="canonical" href="https://global-asp.github.io//storybooks-danmark/stories/nb/0291/">
 	<link rel="alternate" type="application/rss+xml" title="Børnebøger for Danmark" href="/storybooks-danmark">
 	<script src="/storybooks-danmark/js/sbc.js"></script>
 </head>
 
+
   <body>
+
 
     <div class="container">
 
@@ -87,18 +90,18 @@
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
 			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
-			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/nb/0291/mp3/01.mp3"></audio>
+			<audio id="audio01" onended="resetbutton('01')" src="/storybooks-danmark/audio/nb/0291/mp3/01.mp3"></audio>
 			<button onclick="switchlang('nb,da','da,en,nb')" class="btn btn-lg lang-primary" title="Switch between bokmål and dansk">da</button>
 			<button style="display:none" onclick="switchlang('nb,en','da,en,nb')" class="btn btn-lg lang-secondary" title="Switch between bokmål og engelsk">en</button>
 		</div>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af"></span> Nina Orange</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Illustreret af"><img class="cover-icon" src="/storybooks-danmark/css/art.svg" alt="Illustreret af"></span> Wiehan de Jager</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Oversat af"><img class="cover-icon" src="/storybooks-danmark/css/global.svg" alt="Oversat af"></span> Espen Stranger-Johannessen</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Læst af"><img class="cover-icon" src="/storybooks-danmark/css/megaphone.svg" alt="Læst af"></span> Espen Stranger-Johannessen</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon" src="/storybooks-danmark/css/language.svg" alt="Sprog"></span> <a href="/storybooks-danmark/stories/nb">bokmål</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon" src="/storybooks-danmark/css/level.svg" alt="Niveau"></span> <a href="/storybooks-danmark/stories/nb/level4">Niveau 4</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/nb/0291/nb-0291_vusi.mp3" type="audio/mpeg"></audio></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af"></span> Nina Orange</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Illustreret af"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/art.svg" alt="Illustreret af"></span> Wiehan de Jager</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Oversat af"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/global.svg" alt="Oversat af"></span> Espen Stranger-Johannessen</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Læst af"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/megaphone.svg" alt="Læst af"></span> Espen Stranger-Johannessen</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/language.svg" alt="Sprog"></span> <a href="/storybooks-danmark/stories/nb">bokmål</a></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/level.svg" alt="Niveau"></span> <a href="/storybooks-danmark/stories/nb/level4">Niveau 4</a></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-audio" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="/0291/nb-0291_vusi.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -469,7 +472,7 @@ eating.
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/13.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	“Hva skal jeg gjøre?” ropte Vusi. “Den kua som sprang bort var en gave til gjengjeld for halmen som bygningsarbeiderne ga meg. Bygningsarbeiderne ga meg halmen fordi de knakk kjeppen fra fruktplukkerne. Fruktplukkerne ga meg kjeppen fordi de knuste egget som var ment for kaka. Kaka var ment for bryllupet. Nå er det ikke noe egg, ikke noen kake, og ikke noen gave.”
+	“Hva skal jeg gjøre?” ropte Vusi. “Den kua som sprang bort, var en gave til gjengjeld for halmen som bygningsarbeiderne ga meg. Bygningsarbeiderne ga meg halmen fordi de knakk kjeppen fra fruktplukkerne. Fruktplukkerne ga meg kjeppen fordi de knuste egget som var ment for kaka. Kaka var ment for bryllupet. Nå er det ikke noe egg, ikke noen kake, og ikke noen gave.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -507,7 +510,7 @@ gift.”
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/14.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Søstera til Vusi tenkte en stund, så sa hun: “Vusi, kjære bror, jeg bryr meg virkelig ikke om gaver. Jeg bryr meg ikke en gang om kaka! Vi er alle sammen samlet her, så jeg er glad. Så ta på deg noen fine klær og la oss feire denne dagen!” Så det var det Vusi gjorde.
+	Søstera til Vusi tenkte en stund, så sa hun: “Vusi, kjære bror, jeg bryr meg virkelig ikke om gaver. Jeg bryr meg ikke en gang om kaka! Vi er alle sammen samlet her, så jeg er glad. Så ta på deg noen fine klær, og la oss feire denne dagen!” Så det var det Vusi gjorde.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -565,6 +568,8 @@ And so that’s what Vusi did.
 	<a class="btn btn-lg" href="/storybooks-danmark/stories/nb" class="button">Tilbage til fortællingerne</a> <a class="btn btn-lg disabled" target="_blank" href="">Nedlagre PDF</a>
 <br><br>
 </div>
+
+
 
     </div>
 

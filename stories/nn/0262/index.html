@@ -89,16 +89,18 @@
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/01.mp3"></audio>
 			<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk and dansk">da</button>
 			<button style="display:none" onclick="switchlang('nn,en','da,en,nn')" class="btn btn-lg lang-secondary" title="Switch between nynorsk og engelsk">en</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af"></span> Lesley Koyi</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustreret af"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/art.svg" alt="Illustreret af"></span> Wiehan de Jager</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Oversat af"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/global.svg" alt="Oversat af"></span> Espen Stranger-Johannessen, Martine Rørstad Sand</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Læst af"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/megaphone.svg" alt="Læst af"></span> Kristofer Olai Ravn Stavseng</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/language.svg" alt="Sprog"></span> <a href="/storybooks-danmark/stories/nn">nynorsk</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/level.svg" alt="Niveau"></span> <a href="/storybooks-danmark/stories/nn/level5">Niveau 5</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story"></span> <span class="cover_msg">The audio for this story is currently not available.</span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-audio" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/nn/0262/nn-0262_magozwe.mp3" type="audio/mpeg"></audio></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
@@ -124,7 +126,8 @@ Among the group of boys was Magozwe. He was the youngest.
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -151,7 +154,8 @@ Among the group of boys was Magozwe. He was the youngest.
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -165,7 +169,7 @@ Among the group of boys was Magozwe. He was the youngest.
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Viss Magozwe klaga eller stilte spørsmål, slo onkelen hans han. Når Magozwe spurde om han kunne gå på skulen, slo onkelen hans han og sa: “Du er for dum til å læra noko som helst.” Etter tre år med denne behandlinga rømde Magozwe frå onkelen sin. Han byrja å bu på gata.
+	Viss Magozwe klaga eller stilte spørsmål, slo onkelen hans han. Når Magozwe spurde om han kunne gå på skulen, slo onkelen hans han og sa: «Du er for dum til å læra noko som helst.» Etter tre år med denne behandlinga rømde Magozwe frå onkelen sin. Han byrja å bu på gata.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
@@ -180,7 +184,8 @@ After three years of this treatment Magozwe ran away from his uncle. He started 
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -211,7 +216,8 @@ Life was even more difficult because of fights with rival groups who wanted cont
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -240,7 +246,8 @@ Every day after that he would take out the book and look at the pictures. He did
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -258,7 +265,7 @@ Every day after that he would take out the book and look at the pictures. He did
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
-	Billederne fortalte historien om en dreng, der voksede op og blev pilot. Magozwe dagdrømte om at blive pilot. Nogle gange forestillede han sig, at han var drengen i historien.
+	Billederne fortalte en historie om en dreng, der voksede op og blev pilot. Magozwe dagdrømte om at blive pilot. Nogle gange forestillede han sig, at han var drengen i historien.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l2"><h3>
 	The pictures told the story of a boy who grew up to be a pilot.
@@ -269,7 +276,8 @@ Magozwe would daydream of being a pilot. Sometimes, he imagined that he was the 
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text08" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -283,11 +291,11 @@ Magozwe would daydream of being a pilot. Sometimes, he imagined that he was the 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/08.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Det var kaldt og Magozwe stod langs vegen og tagg. Ein mann gjekk bort til han. “Hei, eg heiter Thomas. Eg bur i nærleiken, på ein stad der du kan få deg noko å eta”, sa han og peikte på eit gult hus med blått tak. “Eg håpar du dreg dit for å få deg litt mat?” spurde han. Magozwe såg på han, og deretter på huset. “Kanskje”, sa han og gjekk.
+	Det var kaldt og Magozwe stod langs vegen og tagg. Ein mann gjekk bort til han. «Hei, eg heiter Thomas. Eg bur i nærleiken, på ein stad der du kan få deg noko å eta», sa han og peikte på eit gult hus med blått tak. «Eg håpar du dreg dit for å få deg litt mat?» spurde han. Magozwe såg på han, og deretter på huset. «Kanskje», sa han og gjekk.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
-	Det var koldt, og Magozwe stod ved vejen og tiggede. En mand kom hen til ham. “Hej, jeg hedder Thomas. Jeg arbejder et sted her i nærheden, hvor du kan få noget at spise,” sagde manden. Han pegede på et gult hus med et blåt tag. “Jeg håber, du vil gå derhen og få noget at spise?” spurgte han. Magozwe kiggede på manden og så på huset. “Måske,” sagde han og gik væk.
+	Det var koldt, og Magozwe stod ved vejen og tiggede. En mand kom hen til ham. “Hej, jeg hedder Thomas. Jeg arbejder på et sted her i nærheden, hvor du kan få noget at spise,” sagde manden. Han pegede på et gult hus med et blåt tag. “Jeg håber, du vil gå derhen og få noget at spise?” spurgte han. Magozwe kiggede på manden og så på huset. “Måske,” sagde han og gik væk.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l2"><h3>
 	It was cold and Magozwe was standing on the road begging. A man walked up to him. “Hello, I’m Thomas. I work near here, at a place where you can get something to eat,” said the man.
@@ -300,7 +308,8 @@ Magozwe looked at the man, and then at the house. “Maybe,” he said, and walk
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text09" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio08" onended="resetbutton('08')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/08.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -329,7 +338,8 @@ Thomas listened to the stories of people’s lives. He was serious and patient, 
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text10" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio09" onended="resetbutton('09')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/09.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -343,7 +353,7 @@ Thomas listened to the stories of people’s lives. He was serious and patient, 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/10.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Magozwe sat på fortauet og kika i biletboka då Thomas kom og sette seg ved sida av han. “Kva handlar forteljinga om?” spurde Thomas. “Ho handlar om ein gut som vert pilot”, svara Magozwe. “Kva heiter guten?” spurde Thomas. “Eg veit ikkje, eg kan ikkje lesa”, svara Magozwe lågt.
+	Magozwe sat på fortauet og kika i biletboka då Thomas kom og sette seg ved sida av han. «Kva handlar forteljinga om?» spurde Thomas. «Ho handlar om ein gut som vert pilot», svara Magozwe. «Kva heiter guten?» spurde Thomas. «Eg veit ikkje, eg kan ikkje lesa», svara Magozwe lågt.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
@@ -364,7 +374,8 @@ Thomas listened to the stories of people’s lives. He was serious and patient, 
 	<div class="btn-group switcher-group">
 		<a href="#text09" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text11" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio10" onended="resetbutton('10')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/10.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -395,7 +406,8 @@ Sometimes they would talk while they ate at the house with the blue roof.
 	<div class="btn-group switcher-group">
 		<a href="#text10" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text12" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio11" onended="resetbutton('11')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/11.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -409,7 +421,7 @@ Sometimes they would talk while they ate at the house with the blue roof.
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/12.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Omkring Magozwes tiande fødselsdag gav Thomas han ei ny barnebok. Det var forteljinga om ein landsbygut som voks opp til å verta ein berømt fotballspelar. Thomas las den forteljinga for Magozwe mange gonger, heilt til han ein dag sa: “Eg synest det er på tide at du går på skulen og lærer å lesa. Kva synest du?” Thomas forklarte at han visste om ein stad der born kunne bu og gå på skule.
+	Omkring Magozwes tiande fødselsdag gav Thomas han ei ny barnebok. Det var forteljinga om ein landsbygut som voks opp til å verta ein berømt fotballspelar. Thomas las den forteljinga for Magozwe mange gonger, heilt til han ein dag sa: «Eg synest det er på tide at du går på skulen og lærer å lesa. Kva synest du?» Thomas forklarte at han visste om ein stad der born kunne bu og gå på skule.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
@@ -424,7 +436,8 @@ Thomas read that story to Magozwe many times, until one day he said, “I think 
 	<div class="btn-group switcher-group">
 		<a href="#text11" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text13" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio12" onended="resetbutton('12')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/12.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -438,7 +451,7 @@ Thomas read that story to Magozwe many times, until one day he said, “I think 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/13.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Magozwe tenkte på denne nye staden og på å gå på skulen. Kva om onkelen hans hadde rett, og han var for dum til å læra noko? Kva om dei slo han på denne nye staden? Han var redd. “Kanskje det er betre å bu på gata”, tenkte han.
+	Magozwe tenkte på denne nye staden og på å gå på skulen. Kva om onkelen hans hadde rett, og han var for dum til å læra noko? Kva om dei slo han på denne nye staden? Han var redd. «Kanskje det er betre å bu på gata», tenkte han.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
@@ -453,7 +466,8 @@ What if they beat him at this new place? He was afraid. “Maybe it is better to
 	<div class="btn-group switcher-group">
 		<a href="#text12" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text14" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio13" onended="resetbutton('13')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/13.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -480,7 +494,8 @@ What if they beat him at this new place? He was afraid. “Maybe it is better to
 	<div class="btn-group switcher-group">
 		<a href="#text13" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text15" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio14" onended="resetbutton('14')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/14.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -509,7 +524,8 @@ Altogether there were ten children living at that house. Along with Auntie Cissy
 	<div class="btn-group switcher-group">
 		<a href="#text14" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text16" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio15" onended="resetbutton('15')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/15.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -538,7 +554,8 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 	<div class="btn-group switcher-group">
 		<a href="#text15" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text17" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio16" onended="resetbutton('16')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/16.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -552,11 +569,11 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 <div id="text17" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/17.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Magozwe sat på tunet ved huset med det grøne taket og las ei barnebok frå skulen. Thomas kom og sat seg ved sida av han. “Kva handlar forteljinga om?” spurde Thomas. “Ho handlar om ein gut som vert lærar”, svara Magozwe. “Kva heiter guten?” spurde Thomas. “Han heiter Magozwe”, svara Magozwe med eit smil.
+	Magozwe sat på tunet ved huset med det grøne taket og las ei barnebok frå skulen. Thomas kom og sat seg ved sida av han. «Kva handlar forteljinga om?» spurde Thomas. «Ho handlar om ein gut som vert lærar», svara Magozwe. «Kva heiter guten?» spurde Thomas. «Han heiter Magozwe», svara Magozwe med eit smil.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
-	Magozwe sad i haven uden for huset med det grønne tag og læste en af skolens bøger. Thomas kom og satte sig ved siden af ham. “Hvad handler historien om?” spurgte Thomas. “Den handler om en dreng, der bliver lærer,” svarede Magozwe. “Hvad hedder drengen?” spurgte Thomas. “Han hedder Magozwe,” sagde Magozwe med et smil.
+	Magozwe sad i haven uden for huset med det grønne tag og læste i en af skolens bøger. Thomas kom og satte sig ved siden af ham. “Hvad handler historien om?” spurgte Thomas. “Den handler om en dreng, der bliver lærer,” svarede Magozwe. “Hvad hedder drengen?” spurgte Thomas. “Han hedder Magozwe,” sagde Magozwe med et smil.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l2"><h3>
 	Magozwe was sitting in the yard at the house with the green roof, reading a storybook from school. Thomas came up and sat next to him.
@@ -573,7 +590,8 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 	<div class="btn-group switcher-group">
 		<a href="#text16" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio17" onended="resetbutton('17')" src="https://globalstorybooks.net/media/audio/nn/0262/mp3/17.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('nn,da','da,en,nn')" class="btn btn-lg lang-primary" title="Switch between nynorsk og dansk">da</button>
@@ -589,6 +607,7 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 		<h5>Skrevet af: Lesley Koyi</h5>
 		<h5>Illustreret af: Wiehan de Jager</h5>
 		<h5>Oversat af: Espen Stranger-Johannessen, Martine Rørstad Sand</h5>
+		<h5>Læst af: Kristofer Olai Ravn Stavseng</h5>
 		<h5>Sprog: <a href="/storybooks-danmark/stories/nn">nynorsk</a></h5>
 		<h5><a href="/storybooks-danmark/stories/nn/level5">Niveau 5</a></h5>
 		<h5>Kilde: <a href="https://africanstorybook.org/reader.php?id=13213" target="_blank">Magozwe</a> fra <a href="https://africanstorybook.org/">African Storybook</a></h5>

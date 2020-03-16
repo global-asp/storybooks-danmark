@@ -20,12 +20,10 @@
 	<link rel="stylesheet" href="/storybooks-danmark/css/fontello.min.css">
 	<link rel="canonical" href="https://global-asp.github.io//storybooks-danmark/stories/sv/0262/">
 	<link rel="alternate" type="application/rss+xml" title="Børnebøger for Danmark" href="/storybooks-danmark">
-	<script src="/storybooks-danmark/js/sbc.js"></script>
+	<script src="/storybooks-danmark/js/sbc.min.js"></script>
 </head>
 
-
   <body>
-
 
     <div class="container">
 
@@ -49,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><a class="btn btn-lg disabled" target="_blank" href="">Nedlagre PDF</a></div>
+        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Nedlagre PDF</a></span></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -84,14 +82,12 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1><span class="def">Magozwe</span>
-			<span class="l1"></span>
-			<span class="l2">Magozwe</span>
+			<span class="l1">Magozwe</span>
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
 			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
-			<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk and dansk">da</button>
-			<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+			<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Skrevet af"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/pencil.svg" alt="Skrevet af"></span> Lesley Koyi</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustreret af"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/art.svg" alt="Illustreret af"></span> Wiehan de Jager</h3>
@@ -99,12 +95,13 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Sprog"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/language.svg" alt="Sprog"></span> <a href="/storybooks-danmark/stories/sv">svensk</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/level.svg" alt="Niveau"></span> <a href="/storybooks-danmark/stories/sv/level5">Niveau 5</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-text" src="/storybooks-danmark/css/speaker.svg" alt="Narrate full story"></span> <span class="cover_msg">The audio for this story is currently not available.</span></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
+
 	</div>
 </div>
+
 <hr>
 
-<div id="text02" class="columns">
+        <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
 	I den stora staden Nairobi, långt ifrån ett tryggt hem, bodde en grupp hemlösa pojkar. De levde dagen som den kom. En morgon packade pojkarna ihop sina mattor efter att ha sovit på den kalla trottoaren. För att värma upp sig gjorde de upp en eld av skräp. En av pojkarna var Magozwe. Han var yngst.
@@ -127,8 +124,7 @@ Among the group of boys was Magozwe. He was the youngest.
 		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -154,8 +150,7 @@ Among the group of boys was Magozwe. He was the youngest.
 		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -165,7 +160,7 @@ Among the group of boys was Magozwe. He was the youngest.
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Om Magozwe klagade eller ifrågasatte så slog hans farbror honom. När Magozwe frågade om man kunde få gå i skolan slog hans farbror honom och sade: ”Du är för dum för att lära dig någonting.” Efter tre år med denna behandling rymde Magozwe från sin farbror. Han började bo på gatan.
+	Om Magozwe klagade eller ifrågasatte så slog hans farbror honom. När Magozwe frågade om man kunde få gå i skolan slog hans farbror honom och sa: ”Du är för dum för att lära dig någonting.” Efter tre år med denna behandling rymde Magozwe från sin farbror. Han började bo på gatan.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
@@ -183,8 +178,7 @@ After three years of this treatment Magozwe ran away from his uncle. He started 
 		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -194,7 +188,7 @@ After three years of this treatment Magozwe ran away from his uncle. He started 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Gatulivet var hårt och de flesta av pojkarna kämpade varje dag med att få mat. Ibland blev de anhållna, ibland blev de slagna. När de var sjuka fanns det ingen som hjälpte dem. Gruppen var beroende av den lilla summan pengar de tjänade på att tigga, och från att sälja plast och annan återvinning. Livet var ännu svårare på grund av bråk med rivaliserande grupper som ville ha kontroll över vissa delar av staden.
+	Gatulivet var hårt och de flesta av pojkarna kämpade varje dag med att få mat. Ibland blev de anhållna, ibland blev de slagna. När de var sjuka fanns det ingen som hjälpte dem. Gruppen var beroende av den lilla summa pengar de tjänade på att tigga, och från att sälja plast och annan återvinning. Livet var ännu svårare på grund av bråk med rivaliserande grupper som ville ha kontroll över vissa delar av staden.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
@@ -214,8 +208,7 @@ Life was even more difficult because of fights with rival groups who wanted cont
 		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -243,8 +236,7 @@ Every day after that he would take out the book and look at the pictures. He did
 		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -272,8 +264,7 @@ Magozwe would daydream of being a pilot. Sometimes, he imagined that he was the 
 		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -283,7 +274,7 @@ Magozwe would daydream of being a pilot. Sometimes, he imagined that he was the 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/08.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Det var kallt och Magozwe stod vid sidan av vägen och tiggde. En man kom fram till honom. ”Hej, jag heter Thomas. Jag arbetar i närheten på ett ställe där du kan få något att äta,” sa mannen. Han pekade på ett gult hus med blått tak. ”Jag hoppas att du går dit och får lite mat?” frågade han. Magozwe tittade på mannan, och sedan på huset. ”Kanske”, sa han och gick iväg.
+	Det var kallt och Magozwe stod vid sidan av vägen och tiggde. En man kom fram till honom. ”Hej, jag heter Thomas. Jag arbetar här i närheten på ett ställe där du kan få något att äta,” sa mannen. Han pekade på ett gult hus med blått tak. ”Jag hoppas att du går dit och får lite mat?” frågade han. Magozwe tittade på mannen, och sedan på huset. ”Kanske”, sa han och gick iväg.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
@@ -303,8 +294,7 @@ Magozwe looked at the man, and then at the house. “Maybe,” he said, and walk
 		<button class="btn btn-lg disabled" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -314,7 +304,7 @@ Magozwe looked at the man, and then at the house. “Maybe,” he said, and walk
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/09.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Under månaderna som följde vande de hemlösa pojkarna sig vid att se Thomas. Han tyckte om att prata med människor, speciellt med de som bodde på gatan. Thomas lyssnade på berättelserna om människors liv. Han var allvarlig och tålmodig, aldrig oartig eller respektlös. Några av pojkarna började gå till det blå-gula huset för att få lunch.
+	Under månaderna som följde vande de hemlösa pojkarna sig vid att se Thomas. Han tyckte om att prata med människor, speciellt med folk som bodde på gatan. Thomas lyssnade på berättelserna om människors liv. Han var allvarlig och tålmodig, aldrig oartig eller respektlös. Några av pojkarna började gå till det blå-gula huset för att få lunch.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
@@ -332,8 +322,7 @@ Thomas listened to the stories of people’s lives. He was serious and patient, 
 		<button class="btn btn-lg disabled" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -343,7 +332,7 @@ Thomas listened to the stories of people’s lives. He was serious and patient, 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/10.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Magozwe satt på trottoarkanten och tittade på bilderna i sin bok när Thomas satte sig bredvid honom. ”Vad handlar berättelsen om?” frågade Thomas. ”Den handlar om en pojke som blir pilot,” svarade Magozwe. ”Vad heter pojken?” frågade Thomas. ”Jag vet inte, jag kan inte läsa,” sa Magozwe tystlåtet.
+	Magozwe satt på trottoarkanten och tittade på bilderna i sin bok när Thomas satte sig bredvid honom. ”Vad handlar berättelsen om?” frågade Thomas. ”Den handlar om en pojke som blir pilot,” svarade Magozwe. ”Vad heter pojken?” frågade Thomas. ”Jag vet inte, jag kan inte läsa,” sa Magozwe tyst.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
@@ -367,8 +356,7 @@ Thomas listened to the stories of people’s lives. He was serious and patient, 
 		<button class="btn btn-lg disabled" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -398,8 +386,7 @@ Sometimes they would talk while they ate at the house with the blue roof.
 		<button class="btn btn-lg disabled" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -409,7 +396,7 @@ Sometimes they would talk while they ate at the house with the blue roof.
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/12.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Ungefär vid Magozwes tionde födelsedag gav Thomas honom en ny bok. Det var en berättelse om en bypojke som växte upp och blev en berömd fotbollsspelare. Thomas läste berättelsen för Magozwe många gånger tills han en dag sade: ”Jag tror det är dags att du går i skolan och lärde dig att läsa. Vad tror du?” Thomas förklarade att han visste ett ställe där barn kunde bo och gå i skolan.
+	Ungefär vid Magozwes tionde födelsedag gav Thomas honom en ny bok. Det var en berättelse om en bypojke som växte upp och blev en berömd fotbollsspelare. Thomas läste berättelsen för Magozwe många gånger tills han en dag sa: ”Jag tror det är dags att du går i skolan och lärde dig att läsa. Vad tror du?” Thomas förklarade att han visste ett ställe där barn kunde bo och gå i skolan.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
@@ -427,8 +414,7 @@ Thomas read that story to Magozwe many times, until one day he said, “I think 
 		<button class="btn btn-lg disabled" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -456,8 +442,7 @@ What if they beat him at this new place? He was afraid. “Maybe it is better to
 		<button class="btn btn-lg disabled" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -483,8 +468,7 @@ What if they beat him at this new place? He was afraid. “Maybe it is better to
 		<button class="btn btn-lg disabled" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -494,7 +478,7 @@ What if they beat him at this new place? He was afraid. “Maybe it is better to
 <div id="text15" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/15.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Och så blev det så att Magozwe flyttade in i ett rum i ett hus med grönt tak. Han delade rum med två andra pojkar. Allt som allt bodde tio barn i huset, tillsammans med tant Cissy och hennes man, tre hundar, en katt och en gammal get.
+	Och så kom det sig att Magozwe flyttade in i ett rum i ett hus med grönt tak. Han delade rum med två andra pojkar. Allt som allt bodde tio barn i huset, tillsammans med tant Cissy och hennes man, tre hundar, en katt och en gammal get.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
@@ -512,8 +496,7 @@ Altogether there were ten children living at that house. Along with Auntie Cissy
 		<button class="btn btn-lg disabled" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -541,8 +524,7 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 		<button class="btn btn-lg disabled" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
@@ -576,37 +558,36 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 		<button class="btn btn-lg disabled" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('sv,da','da,en,sv')" class="btn btn-lg lang-primary" title="Switch between svensk og dansk">da</button>
-		<button style="display:none" onclick="switchlang('sv,en','da,en,sv')" class="btn btn-lg lang-secondary" title="Switch between svensk og engelsk">en</button>
+		<button onclick="switchlang('sv,da','da,sv')" class="btn btn-lg lang-primary" title="Ændre mellem svensk og dansk">da</button>
 	</div>
 </div>
 
 </div>
 <hr>
 
-<div id="colophon" class="columns">
+
+        <div id="colophon" class="columns">
 	<div class="column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h5>Skrevet af: Lesley Koyi</h5>
-		<h5>Illustreret af: Wiehan de Jager</h5>
-		<h5>Oversat af: Erika Braas</h5>
-		<h5>Sprog: <a href="/storybooks-danmark/stories/sv">svensk</a></h5>
-		<h5><a href="/storybooks-danmark/stories/sv/level5">Niveau 5</a></h5>
-		<h5>Kilde: <a href="https://africanstorybook.org/reader.php?id=13213" target="_blank">Magozwe</a> fra <a href="https://africanstorybook.org/">African Storybook</a></h5>
+		<h5><span class="colophon-heading">Skrevet af:</span> Lesley Koyi</h5>
+		<h5><span class="colophon-heading">Illustreret af:</span> Wiehan de Jager</h5>
+		<h5><span class="colophon-heading">Oversat af:</span> Erika Braas</h5>
+		<h5><span class="colophon-heading">Sprog:</span> <a href="/storybooks-danmark/stories/sv">svensk</a></h5>
+		<h5><span class="colophon-heading">Niveau:</span> <a href="/storybooks-danmark/stories/sv/level5">Niveau 5</a></h5>
+		<h5><span class="colophon-heading">Kilde:</span> <a href="https://africanstorybook.org/reader.php?id=13213" target="_blank">Magozwe</a> fra <a href="https://africanstorybook.org/">African Storybook</a></h5>
 
 		<div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.da" target="_blank"><img alt="Creative Commons licens" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dette værk er licenseret under en <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.da" target="_blank">Creative Commons Navngivelse 4.0 International licens</a>.</div>
 
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
-		<h5>Læs flere fortællinger på <a href="/storybooks-danmark/stories/sv/level5">niveau 5</a>:</h5>
+		<h5>Læs flere fortællinger på <a href="/storybooks-danmark/stories/sv/level5">niveau 15</a>:</h5>
 			<label class="chip"><a href="/storybooks-danmark/stories/sv/0052/">Simbegwire</a></label>
 	</div>
 </div>
 <div>
 <h5>Valgmuligheder</h5>
-	<a class="btn btn-lg" href="/storybooks-danmark/stories/sv" class="button">Tilbage til fortællingerne</a> <a class="btn btn-lg disabled" target="_blank" href="">Nedlagre PDF</a>
+	<a class="btn btn-lg" href="/storybooks-danmark/stories/sv" class="button">Tilbage til fortællingerne</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Nedlagre PDF</a></span>
 <br><br>
 </div>
-
 
 
     </div>
